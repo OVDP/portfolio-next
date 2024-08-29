@@ -10,13 +10,16 @@ export const metadata: Metadata = {
 };
 
 export default function RootLayout({
-  children,
+  head,body,
 }: Readonly<{
-  children: React.ReactNode;
+  head: React.ReactNode;
+  body: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
-      <body className={inter.className}>{children}</body>
+    <html data-bs-theme="light" lang="en">
+      <head>{head}</head>
+      <body className={inter.className} style={{ background: "var(--bs-body-bg)" }}>{body}</body>
+      <script async src="assets/bootstrap/js/bootstrap.min.js"></script>
     </html>
   );
 }
