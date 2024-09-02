@@ -1,7 +1,7 @@
 
 export default function navbar() {
   return (
-    <nav data-component="navbar" className="navbar navbar-expand-md py-3" style={{ "--bs-light": "var(--bs-navbar-disabled-color)", "--bs-light-rgb": "0,0,0", "--bs-body-bg": "var(--bs-navbar-disabled-color)", "border-style": "none", "border-color": "#cb1a2c", "border-bottom-style": "solid", "border-bottom-color": "#cb1a2c" }}>
+    <nav data-component="navbar" className="navbar navbar-expand-md py-3" style={{"borderColor": "#cb1a2c", "borderBottom": "solid", "borderBottomColor": "#cb1a2c" }}>
             <div className="container"><button data-bs-toggle="collapse" className="navbar-toggler" data-bs-target="#navcol-4"><span className="visually-hidden">Toggle navigation</span><span className="navbar-toggler-icon"></span></button>
                 <div className="collapse navbar-collapse flex-grow-0 order-md-first" id="navcol-4">
                     <ul className="navbar-nav me-auto">
@@ -15,7 +15,7 @@ export default function navbar() {
                         <li className="nav-item"><a className="nav-link active" href="#">Experiences</a></li>
                     </ul>
                 </div>
-                <div className="theme-switcher dropdown"><a className="dropdown-toggle" aria-expanded="false" data-bs-toggle="dropdown" href="#" style="color: #cb1a2c;border-bottom-color: #cb1a2c;"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="currentColor" viewBox="0 0 16 16" className="bi bi-sun-fill mb-1" style="color: #cb1a2c;border-bottom-color: #cb1a2c;">
+                <div className="theme-switcher dropdown"><a className="dropdown-toggle" aria-expanded="false" data-bs-toggle="dropdown" href="#" style={{"color": "#cb1a2c", "borderBottomColor": "#cb1a2c" }}><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="currentColor" viewBox="0 0 16 16" className="bi bi-sun-fill mb-1" style={{"color": "#cb1a2c", "borderBottomColor": "#cb1a2c" }}>
                             <path d="M8 12a4 4 0 1 0 0-8 4 4 0 0 0 0 8M8 0a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 0m0 13a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 13m8-5a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2a.5.5 0 0 1 .5.5M3 8a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2A.5.5 0 0 1 3 8m10.657-5.657a.5.5 0 0 1 0 .707l-1.414 1.415a.5.5 0 1 1-.707-.708l1.414-1.414a.5.5 0 0 1 .707 0m-9.193 9.193a.5.5 0 0 1 0 .707L3.05 13.657a.5.5 0 0 1-.707-.707l1.414-1.414a.5.5 0 0 1 .707 0zm9.193 2.121a.5.5 0 0 1-.707 0l-1.414-1.414a.5.5 0 0 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .707M4.464 4.465a.5.5 0 0 1-.707 0L2.343 3.05a.5.5 0 1 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .708z"></path>
                         </svg></a>
                     <div className="dropdown-menu"><a className="dropdown-item d-flex align-items-center" href="#" data-bs-theme-value="light"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="currentColor" viewBox="0 0 16 16" className="bi bi-sun-fill opacity-50 me-2">
