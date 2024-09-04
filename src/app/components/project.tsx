@@ -1,61 +1,62 @@
 export default function project() {
     return (
+        <>
         <div data-component="projects" className="container py-4 py-xl-5">
-            <h1 style={{ textAlign: "center", margin: "4rem 0px 3rem 0px" }}>
-                P<span style={{ borderBottom: "6px solid #ef5868" }}>rojects&nbsp;</span>
-            </h1>
-            <p>
-                Throughout my journey in the digital world, I've developed various projects and continuously expanded my interests and knowledge. Here, you can explore some of the projects I've created along the way.
-            </p>
+            <h1 style={{ textAlign: "center", margin: "4rem 0px 3rem 0px" }}>P<span style={{ borderBottom: "6px solid #ef5868" }}>rojects&nbsp;</span></h1>
+            <p>Throughout my journey in the digital world, I've developed various projects and continuously expanded my interests and knowledge. Here, you can explore some of the projects I've created along the way.</p>
             <div className="row">
-                <div className="col-md-8 col-xl-6 col-xxl-9 mx-auto p-4" style={{ width: "100%" }}>
+                <div className="col-md-8 col-xl-6 col-xxl-9 mx-auto p-4" style={{ width: "100%" }}></div>
                     <div>
                         <div className="d-flex align-items-center align-items-md-start justify-content-lg-center align-items-lg-center justify-content-xl-center align-items-xl-center justify-content-xxl-center">
                             <div className="d-lg-flex justify-content-lg-center align-items-lg-center justify-content-xl-center align-items-xl-center">
                                 <div>
                                     <div className="d-lg-flex d-xxl-flex align-items-lg-center justify-content-xxl-start align-items-xxl-center" style={{ width: "30rem" }}></div>
-                                        <div className="bs-icon-xl bs-icon-circle bs-icon-primary d-flex flex-shrink-0 justify-content-center align-items-center me-4 d-inline-block bs-icon xl" style={{ background: "#cb1a2c" }}></div>
-                                            <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="currentColor" viewBox="0 0 16 16" className="bi bi-dice-1"></svg>
+                                        <div className="bs-icon-xl bs-icon-circle bs-icon-primary d-flex flex-shrink-0 justify-content-center align-items-center me-4 d-inline-block bs-icon xl" style={{ background: "#cb1a2c" }}><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="currentColor" viewBox="0 0 16 16" className="bi bi-dice-1">
                                                 <circle cx="8" cy="8" r="1.5"></circle>
                                                 <path d="M13 1a2 2 0 0 1 2 2v10a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V3a2 2 0 0 1 2-2zM3 0a3 3 0 0 0-3 3v10a3 3 0 0 0 3 3h10a3 3 0 0 0 3-3V3a3 3 0 0 0-3-3z"></path>
-                                            </svg>
-                                        </div>
-                                        <h4 style={{ textAlign: "center" }}>Custom minecraft commands using Skript</h4>
+                                            </svg></div>
+                                        <h4 className="centered-heading">Custom minecraft commands using Skript</h4>
                                     </div>
-                                    <p style={{ width: "30rem" }}></p>
-                                        My first programming language is Skript, which is a Minecraft plugin that allows you to create custom commands and features for your Minecraft server. When I first started, I didn't know how to write a Minecraft plugin in Java, so I turned to a tutorial to simplify it. This led me to discover and use Skript.
-                                        <br /><br />
-                                        With
-                                        <div className="carousel-item"><img className="w-100 d-block" src="assets/img/skript.jpg" alt="Slide Image"></div>
+                                    <p style={{ width: "30rem" }}>My first programming language is Skript, which is a Minecraft plugin that allows you to create custom commands and features for your Minecraft server. When I first started, I didn't know how to write a Minecraft plugin in Java, so I turned to a tutorial to simplify it. This led me to discover and use Skript.<br/><br/>With Skript, I created custom commands that allowed me to use special items, save coordinates, and teleport back to those saved coordinates.</p>
+                                    <h1 style={{ fontSize: "20px" }}>Skills used:</h1>
+                                    <ul>
+                                        <li>Spigot</li>
+                                        <li>Skript</li>
+                                    </ul>
+                                </div>
+                                <div className="carousel slide d-xxl-flex justify-content-xxl-ce</p>nter align-items-xxl-center w-md-10" data-bs-ride="false" id="carousel-9"></div>
+                                    <div className="carousel-inner">
+                                        <div className="carousel-item active"><img className="w-100 d-block" src="assets/img/minehut.jpg" alt="Slide Image"/></div>
+                                        <div className="carousel-item"><img className="w-100 d-block" src="assets/img/skript.jpg" alt="Slide Image"/></div>
                                     </div>
                                     <div><a className="carousel-control-prev" href="#carousel-9" role="button" data-bs-slide="prev"><span className="carousel-control-prev-icon"></span><span className="visually-hidden">Previous</span></a><a className="carousel-control-next" href="#carousel-9" role="button" data-bs-slide="next"><span className="carousel-control-next-icon"></span><span className="visually-hidden">Next</span></a></div>
                                     <div className="carousel-indicators"><button type="button" data-bs-target="#carousel-9" data-bs-slide-to="0" className="active"></button> <button type="button" data-bs-target="#carousel-9" data-bs-slide-to="1"></button></div>
                                 </div>
                             </div>
                         </div><sub>01/12/2017-ish</sub>
-                        <hr className="my-5" style="color: var(--bs-body-bg);background: var(--bs-body-bg);">
+                        <hr className="my-5" style={{ color: "var(--bs-body-bg)", background: "var(--bs-body-bg)" }}/>
                     </div>
                     <div>
                         <div className="d-flex align-items-center align-items-md-start justify-content-lg-center align-items-lg-center justify-content-xl-center align-items-xl-center justify-content-xxl-center">
                             <div className="d-lg-flex justify-content-lg-center align-items-lg-center justify-content-xl-center align-items-xl-center">
-                                <div className="carousel slide d-grid d-lg-flex d-xxl-flex justify-content-lg-center align-items-lg-center justify-content-xxl-center align-items-xxl-center" data-bs-ride="false" id="carousel-2" style="width: 25rem;margin: 1rem;">
+                                <div className="carousel slide d-grid d-lg-flex d-xxl-flex justify-content-lg-center align-items-lg-center justify-content-xxl-center align-items-xxl-center" data-bs-ride="false" id="carousel-2" style={{ width: "25rem", margin: "1rem" }}>
                                     <div className="carousel-inner">
-                                        <div className="carousel-item active"><img className="w-100 d-block" src="assets/img/studio.png" alt="Slide Image"></div>
-                                        <div className="carousel-item"><img className="w-100 d-block" src="assets/img/lua.png" alt="Slide Image"></div>
+                                        <div className="carousel-item active"><img className="w-100 d-block" src="assets/img/studio.png" alt="Slide Image"/></div>
+                                        <div className="carousel-item"><img className="w-100 d-block" src="assets/img/lua.png" alt="Slide Image"/></div>
                                     </div>
                                     <div><a className="carousel-control-prev" href="#carousel-2" role="button" data-bs-slide="prev"><span className="carousel-control-prev-icon"></span><span className="visually-hidden">Previous</span></a><a className="carousel-control-next" href="#carousel-2" role="button" data-bs-slide="next"><span className="carousel-control-next-icon"></span><span className="visually-hidden">Next</span></a></div>
                                     <div className="carousel-indicators"><button type="button" data-bs-target="#carousel-2" data-bs-slide-to="0" className="active"></button> <button type="button" data-bs-target="#carousel-2" data-bs-slide-to="1"></button></div>
                                 </div>
                                 <div className="d-grid float-start">
-                                    <div className="d-lg-flex d-xxl-flex justify-content-lg-end align-items-lg-center justify-content-xxl-end align-items-xxl-center" style="width: 30rem;">
-                                        <h4 className="d-xxl-flex align-items-xxl-center" style="text-align: left;margin-right: 2rem;">Game development with Roblox Studio</h4>
-                                        <div className="bs-icon-xl bs-icon-circle bs-icon-primary d-flex flex-shrink-0 justify-content-center align-items-center me-4 d-inline-block bs-icon xl" style="background: #cb1a2c;"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="currentColor" viewBox="0 0 16 16" className="bi bi-dice-2">
+                                    <div className="d-lg-flex d-xxl-flex justify-content-lg-end align-items-lg-center justify-content-xxl-end align-items-xxl-center" style={{ width: "30rem" }}>
+                                        <h4 className="d-xxl-flex align-items-xxl-center" style={{ textAlign: "left", marginRight: "2rem" }}>Game development with Roblox Studio</h4>
+                                        <div className="bs-icon-xl bs-icon-circle bs-icon-primary d-flex flex-shrink-0 justify-content-center align-items-center me-4 d-inline-block bs-icon xl" style={{ background: "#cb1a2c" }}><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="currentColor" viewBox="0 0 16 16" className="bi bi-dice-2">
                                                 <path d="M13 1a2 2 0 0 1 2 2v10a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V3a2 2 0 0 1 2-2zM3 0a3 3 0 0 0-3 3v10a3 3 0 0 0 3 3h10a3 3 0 0 0 3-3V3a3 3 0 0 0-3-3z"></path>
                                                 <path d="M5.5 4a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0m8 8a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0"></path>
                                             </svg></div>
                                     </div>
-                                    <p style="width: 30rem;">As a kid with a lot of free time, I enjoyed playing with Nerf guns, playing football, and gaming. One of the games I played was Roblox, which also offered an advanced game engine for developing games. This naturally sparked my interest in game development.<br><br>After focusing my creativity on developing smaller games, I became better in modeling game objects and scripting in Lua. This experience helped me understand other programming languages more quickly, such as JavaScript and PHP.</p>
-                                    <h1 style="font-size: 20px;">Skills used:</h1>
+                                    <p style={{ width: "30rem" }}>As a kid with a lot of free time, I enjoyed playing with Nerf guns, playing football, and gaming. One of the games I played was Roblox, which also offered an advanced game engine for developing games. This naturally sparked my interest in game development.<br/><br/>After focusing my creativity on developing smaller games, I became better in modeling game objects and scripting in Lua. This experience helped me understand other programming languages more quickly, such as JavaScript and PHP.</p>
+                                    <h1 className="skills-heading">Skills used:</h1>
                                     <ul>
                                         <li>Roblox studio</li>
                                         <li>Lua</li>
@@ -63,7 +64,7 @@ export default function project() {
                                 </div>
                             </div>
                         </div><sub className="d-lg-flex justify-content-lg-end" style="text-align: right;">26/09/2017 - 12/05/2018</sub>
-                        <hr className="my-5" style="color: var(--bs-body-bg);background: var(--bs-body-bg);">
+                        <hr className="my-5" style="color: var(--bs-body-bg);background: var(--bs-body-bg);"/>
                     </div>
                     <div>
                         <div className="d-flex align-items-center align-items-md-start justify-content-lg-center align-items-lg-center justify-content-xl-center align-items-xl-center justify-content-xxl-center">
@@ -265,8 +266,6 @@ export default function project() {
                     </div>
                 </div>
             </div>
-        </div>
-    </div>
-</div>
+        </>     
   )
 }
