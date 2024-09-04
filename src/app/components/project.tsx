@@ -5,12 +5,12 @@ export default function project() {
             <h1 style={{ textAlign: "center", margin: "4rem 0px 3rem 0px" }}>P<span style={{ borderBottom: "6px solid #ef5868" }}>rojects&nbsp;</span></h1>
             <p>Throughout my journey in the digital world, I've developed various projects and continuously expanded my interests and knowledge. Here, you can explore some of the projects I've created along the way.</p>
             <div className="row">
-                <div className="col-md-8 col-xl-6 col-xxl-9 mx-auto p-4" style={{ width: "100%" }}></div>
+                <div className="col-md-8 col-xl-6 col-xxl-9 mx-auto p-4" style={{ width: "100%" }}>
                     <div>
                         <div className="d-flex align-items-center align-items-md-start justify-content-lg-center align-items-lg-center justify-content-xl-center align-items-xl-center justify-content-xxl-center">
                             <div className="d-lg-flex justify-content-lg-center align-items-lg-center justify-content-xl-center align-items-xl-center">
                                 <div>
-                                    <div className="d-lg-flex d-xxl-flex align-items-lg-center justify-content-xxl-start align-items-xxl-center" style={{ width: "30rem" }}></div>
+                                    <div className="d-lg-flex d-xxl-flex align-items-lg-center justify-content-xxl-start align-items-xxl-center" style={{ width: "30rem" }}>
                                         <div className="bs-icon-xl bs-icon-circle bs-icon-primary d-flex flex-shrink-0 justify-content-center align-items-center me-4 d-inline-block bs-icon xl" style={{ background: "#cb1a2c" }}><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="currentColor" viewBox="0 0 16 16" className="bi bi-dice-1">
                                                 <circle cx="8" cy="8" r="1.5"></circle>
                                                 <path d="M13 1a2 2 0 0 1 2 2v10a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V3a2 2 0 0 1 2-2zM3 0a3 3 0 0 0-3 3v10a3 3 0 0 0 3 3h10a3 3 0 0 0 3-3V3a3 3 0 0 0-3-3z"></path>
@@ -229,31 +229,31 @@ export default function project() {
                                 </div>
                             </div>
                         </div><sub>22/10/2023 - 10/06/2024</sub>
-                        <hr className="my-5" style="color: var(--bs-body-bg);background: var(--bs-body-bg);">
+                        <hr className="my-5" style={{ color: "var(--bs-body-bg)", background: "var(--bs-body-bg)" }}/>
                     </div>
                     <div className="d-flex align-items-center align-items-md-start justify-content-lg-center align-items-lg-center justify-content-xl-center align-items-xl-center justify-content-xxl-center">
                         <div className="d-lg-flex justify-content-lg-center align-items-lg-center justify-content-xl-center align-items-xl-center">
-                            <div className="carousel slide d-xxl-flex justify-content-xxl-center align-items-xxl-center" data-bs-ride="false" id="carousel-6" style="width: 25rem;margin: 1rem;">
+                            <div className="carousel slide d-xxl-flex justify-content-xxl-center align-items-xxl-center" data-bs-ride="false" id="carousel-6" style={{ width: "25rem", margin: "1rem" }}>
                                 <div className="carousel-inner">
-                                    <div className="carousel-item active"><img className="w-100 d-block" src="assets/img/arduinoide.png" alt="Slide Image"></div>
-                                    <div className="carousel-item"><img className="w-100 d-block" src="assets/img/esp32.png" alt="Slide Image"></div>
+                                    <div className="carousel-item active"><img className="w-100 d-block" src="assets/img/arduinoide.png" alt="Slide Image"/></div>
+                                    <div className="carousel-item"><img className="w-100 d-block" src="assets/img/esp32.png" alt="Slide Image"/></div>
                                 </div>
-                                <div><a className="carousel-control-prev" href="#carousel-6" role="button" data-bs-slide="prev"><span className="carousel-control-prev-icon" style="color: #fff;"></span><span className="visually-hidden">Previous</span></a><a className="carousel-control-next" href="#carousel-6" role="button" data-bs-slide="next"><span className="carousel-control-next-icon" style="color: #fff;"></span><span className="visually-hidden">Next</span></a></div>
-                                <div className="carousel-indicators" style="color: #fff;"><button type="button" data-bs-target="#carousel-6" data-bs-slide-to="0" className="active"></button> <button type="button" data-bs-target="#carousel-6" data-bs-slide-to="1"></button></div>
+                                <div><a className="carousel-control-prev" href="#carousel-6" role="button" data-bs-slide="prev"><span className="carousel-control-prev-icon" style={{color: "#fff"}}></span><span className="visually-hidden">Previous</span></a><a className="carousel-control-next" href="#carousel-6" role="button" data-bs-slide="next"><span className="carousel-control-next-icon" style={{color: "#fff"}}></span><span className="visually-hidden">Next</span></a></div>
+                                <div className="carousel-indicators" style={{ color: "#fff" }}><button type="button" data-bs-target="#carousel-6" data-bs-slide-to="0" className="active"></button> <button type="button" data-bs-target="#carousel-6" data-bs-slide-to="1"></button></div>
                             </div>
                             <div>
-                                <div className="d-lg-flex d-xxl-flex justify-content-lg-end align-items-lg-center justify-content-xxl-end align-items-xxl-center" style="width: 30rem;text-align: right;">
-                                    <h4 style="text-align: center;margin-right: 2rem;">Rubber ducky USB</h4>
-                                    <div className="bs-icon-xl bs-icon-circle bs-icon-primary d-flex flex-shrink-0 justify-content-center align-items-center order-last ms-4 d-inline-block bs-icon xl" style="background: #cb1a2c;"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="currentColor" viewBox="0 0 16 16" className="bi bi-dice-6" style="font-size: 24px;margin: 2px;">
+                                <div className="d-lg-flex d-xxl-flex justify-content-lg-end align-items-lg-center justify-content-xxl-end align-items-xxl-center" style={{ width: "30rem", textAlign: "right" }}>
+                                    <h4 style={{ textAlign: "center", marginRight: "2rem" }}>Rubber ducky USB</h4>
+                                    <div className="bs-icon-xl bs-icon-circle bs-icon-primary d-flex flex-shrink-0 justify-content-center align-items-center order-last ms-4 d-inline-block bs-icon xl" style={{ background: "#cb1a2c" }}><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="currentColor" viewBox="0 0 16 16" className="bi bi-dice-6" style={{ fontSize: "24px", margin: "2px" }}>
                                             <path d="M13 1a2 2 0 0 1 2 2v10a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V3a2 2 0 0 1 2-2zM3 0a3 3 0 0 0-3 3v10a3 3 0 0 0 3 3h10a3 3 0 0 0 3-3V3a3 3 0 0 0-3-3z"></path>
                                             <path d="M5.5 4a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0m8 0a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0m0 8a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0m0-4a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0m-8 4a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0m0-4a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0"></path>
-                                        </svg><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="currentColor" viewBox="0 0 16 16" className="bi bi-dice-2" style="font-size: 24px;margin: 2px;">
+                                        </svg><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="currentColor" viewBox="0 0 16 16" className="bi bi-dice-2" style={{fontSize: "24px",margin: "2px"}}>
                                             <path d="M13 1a2 2 0 0 1 2 2v10a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V3a2 2 0 0 1 2-2zM3 0a3 3 0 0 0-3 3v10a3 3 0 0 0 3 3h10a3 3 0 0 0 3-3V3a3 3 0 0 0-3-3z"></path>
                                             <path d="M5.5 4a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0m8 8a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0"></path>
                                         </svg></div>
                                 </div>
-                                <p className="d-xxl-flex justify-content-xxl-end" style="width: 30rem;">Long before I started programming, I heard about hacking, which sparked my interest. When I revisited this interest, I began by creating a simple hacking tool using an Arduino ESP32. This initial project led me to develop a device that could communicate without sending suspicious activity. I put this project on hold until I got a Raspberry Pi Pico to continue the work.</p>
-                                <h1 style="font-size: 20px;">Skills used:</h1>
+                                <p className="d-xxl-flex justify-content-xxl-end" style={{ width: "30rem" }}>Long before I started programming, I heard about hacking, which sparked my interest. When I revisited this interest, I began by creating a simple hacking tool using an Arduino ESP32. This initial project led me to develop a device that could communicate without sending suspicious activity. I put this project on hold until I got a Raspberry Pi Pico to continue the work.</p>
+                                <h1 style={{ fontSize: "20px" }}>Skills used:</h1>
                                 <ul>
                                     <li>Arduino IDE</li>
                                     <li>C++</li>
@@ -261,8 +261,9 @@ export default function project() {
                             </div>
                         </div>
                     </div>
-                    <div><sub className="d-lg-flex justify-content-lg-end" style="text-align: right;">23/05/2024 - 25/05/2024 (Or the future)</sub>
-                        <hr className="my-5" style="color: var(--bs-body-bg);background: var(--bs-body-bg);">
+                    <div>
+                        <sub className="d-lg-flex justify-content-lg-end" style={{textAlign: "right"}}>23/05/2024 - 25/05/2024 (Or the future)</sub>
+                        <hr className="my-5" style={{ color: "var(--bs-body-bg)", background: "var(--bs-body-bg)" }} />
                     </div>
                 </div>
             </div>
