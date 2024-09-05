@@ -17,9 +17,13 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en">
-      <Script src="assets/bootstrap/js/bootstrap.min.js" />
-      <Script src="src/app/scripts/bootjs.js" />
+    <html lang="en" data-bs-theme="dark">
+      <head>
+        <Script src="assets/bootstrap/js/bootstrap.min.js" />
+        <Script src="scripts/bootjs.js" />
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Doppio+One&amp;display=swap"/>
+        <link rel="stylesheet" href="assets/css/Navbar-Centered-Brand-Dark-icons.css"/>
+      </head>
       <body className={inter.className}>{children}</body>
     </html>
   );
