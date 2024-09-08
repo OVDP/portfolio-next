@@ -8,6 +8,8 @@ export default function Home() {
   return (
     <>
       <div
+        id="main-background"
+        className=""
         style={{
           background:
             'url("assets/img/openart-make-an-minimalistic-background-of-a-red-horizon-using-the-colors-red-yellow-and-orange_k32-AOTo_upscaled.png") center / contain',
@@ -16,6 +18,8 @@ export default function Home() {
           "--bs-dark-rgb": "255,255,255",
           "--bs-light": "#212529",
           "--bs-light-rgb": "33,37,41",
+          "background-attachment": "fixed",
+          "background-size": "cover",
         }}
       >
         <Navbar />

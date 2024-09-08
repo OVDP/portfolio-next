@@ -5,7 +5,7 @@ export default function footer() {
         <div className="container">
           <div className="col">
             <p className="my-2">
-              <span style={{ color: "rgb(255, 255, 255)" }}>
+              <span>
                 Copyright&nbsp;© 2023&nbsp;Othniel van de Pol. All rights
                 Reserved.
               </span>

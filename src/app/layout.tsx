@@ -21,8 +21,14 @@ export default function RootLayout({
       <head>
         <Script src="assets/bootstrap/js/bootstrap.min.js" />
         <Script src="scripts/bootjs.js" />
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Doppio+One&amp;display=swap"/>
-        <link rel="stylesheet" href="assets/css/Navbar-Centered-Brand-Dark-icons.css"/>
+        <link
+          rel="stylesheet"
+          href="https://fonts.googleapis.com/css?family=Doppio+One&amp;display=swap"
+        />
+        <link
+          rel="stylesheet"
+          href="assets/css/Navbar-Centered-Brand-Dark-icons.css"
+        />
       </head>
       <body className={inter.className}>{children}</body>
     </html>

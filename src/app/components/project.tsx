@@ -132,7 +132,7 @@ export default function project() {
               }}
             />
           </div>
-          <div>
+          <div data-bs-theme="light">
             <div className="d-flex align-items-center align-items-md-start justify-content-lg-center align-items-lg-center justify-content-xl-center align-items-xl-center justify-content-xxl-center">
               <div className="d-lg-flex justify-content-lg-center align-items-lg-center justify-content-xl-center align-items-xl-center">
                 <div
