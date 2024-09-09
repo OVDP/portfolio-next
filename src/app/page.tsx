@@ -4,6 +4,7 @@ import Projects from "./components/project";
 import Experience from "./components/experience";
 import Contact from "./components/contact";
 import Footer from "./components/footer";
+import Projectsv2 from "./components/project/main_projects";
 export default function Home() {
   return (
     <>
@@ -24,11 +25,12 @@ export default function Home() {
       >
         <Navbar />
         <About />
+        <Projectsv2 />
         <Projects />
         <Experience />
         <Contact />
         <Footer />
-      </div>
+      </div> 
     </>
   );
 }
