@@ -22,21 +22,25 @@ export default function ProjectLoadingContent({ project }) {
         `}
       </style>
       <div className="my-1">
-        <span className="text-white me-2">C:\Users\othniel&gt;cls</span>
-      </div>
-      <div className="my-1">
         <span className="text-white me-2">
-          C:\Users\othniel&gt;start project{project.id}.exe
+          <span id="typewriter" className="text-info">C:\Users\othniel&gt;</span>
+          cls
         </span>
       </div>
       <div className="my-1">
         <span className="text-white me-2">
+          <span className="text-info">C:\Users\othniel&gt;</span>start project{project.id}.exe
+        </span>
+      </div>
+      <div className="my-1">
+        <span className="me-2 text-info">
           C:\Users\othniel&gt;
           <span>
-            <span className="blink">▍</span>
+            <span className="blink text-white">▍</span>
           </span>
         </span>
       </div>
     </>
   );
 }
+
