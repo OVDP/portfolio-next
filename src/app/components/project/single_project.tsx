@@ -1,8 +1,38 @@
+"use client";
 import * as React from "react";
+import Content from "./content/project_content";
+import LoadingContent from "./content/project_loading_content";
+import "./button_anim.css";
 
 function ProjectCard({ project }) {
+  const [viewMoreContent, setViewMoreContent] = React.useState("Read more");
+  const [projectContent, setContent] = React.useState(
+    <Content project={project} />
+  );
+  const [loadingDots, setLoadingDots] = React.useState(1);
+  React.useEffect(() => {
+    const interval = setInterval(() => {
+      setLoadingDots((prevDots) => (prevDots % 3) + 1);
+    }, 500);
+
+    return () => clearInterval(interval);
+  }, []);
+  React.useEffect(() => {
+    if (viewMoreContent.startsWith("Loading")) {
+      setViewMoreContent("Loading" + ".".repeat(loadingDots));
+    }
+  }, [loadingDots]);
+  function loading() {
+    setViewMoreContent("Loading.");
+    setContent(<LoadingContent project={project} />);
+  }
+
   return (
-    <div className="border border-danger position-relative rounded w-100" style={{ backgroundColor: "#1f1d1d"}}>
+    <div
+      id={`commandprompt${project.id}`}
+      className="border border-danger position-relative rounded w-100"
+      style={{ backgroundColor: "#1f1d1d" }}
+    >
       <div className="d-flex flex-row">
         <div className="w-100 bg-gradient"></div>
         <div className="w-100 bg-gradient"></div>
@@ -27,46 +57,12 @@ function ProjectCard({ project }) {
         </p>
       </div>
       <div className="overflow-hidden border-top border-2 border-danger px-4 px-lg-8 py-4 py-lg-8">
-        <code className="font-monospace">
-          <div className="blink">
-            <span className="text-danger me-2">const</span>
-            <span className="text-white me-2">project</span>
-            <span className="text-danger me-2">=</span>
-            <span className="text-secondary">{"{"}</span>
-          </div>
-          <div className="ms-4 ms-lg-8">
-            <span className="text-white me-2">name:</span>
-            <span className="text-warning">{`'`}</span>
-            <span className="text-warning">{project.name}</span>
-            <span className="text-secondary">{`',`}</span>
-          </div>
-          <div className="ms-4 ms-lg-8">
-            <span className="text-white">tools:</span>
-            <span className="text-secondary">{` ['`}</span>
-            {project.tools.map((tag, i) => (
-              <React.Fragment key={i}>
-                <span className="text-warning">{tag}</span>
-                {project.tools.length - 1 !== i && (
-                  <span className="text-secondary">{`', '`}</span>
-                )}
-              </React.Fragment>
-            ))}
-            <span className="text-secondary">{`],`}</span>
-          </div>
-          <div className="ms-4 ms-lg-8">
-            <span className="text-white">myRole:</span>
-            <span className="text-warning">{project.role}</span>
-            <span className="text-secondary">,</span>
-          </div>
-          <div className="ms-4 ms-lg-8">
-            <span className="text-white">Description:</span>
-            <span className="text-info">{" " + project.description}</span>
-            <span className="text-secondary">,</span>
-          </div>
-          <div>
-            <span className="text-secondary">{`};`}</span>
-          </div>
-        </code>
+        <code className="font-monospace">{projectContent}</code>
+        <div className="d-flex flex-row">
+          <button className="ms-auto p-1 view-more" onClick={loading}>
+            {viewMoreContent}
+          </button>
+        </div>
       </div>
     </div>
   );
