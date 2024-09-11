@@ -1,7 +1,7 @@
 import { projectsData } from "../../../../utils/data/project_data";
-import ProjectCard from "./single_project";
+import SingleProject from "./single_project";
 
-const Projects = () => {
+const main_project = () => {
   return (
     <div id="projects" className="position-relative z-50 my-4 my-lg-5">
       <div className="sticky-top" style={{ top: "10px" }}>
@@ -28,7 +28,7 @@ const Projects = () => {
                   transition: "all 0.5s",
                 }}
               >
-                <ProjectCard project={project} />
+                <SingleProject project={project} />
               </div>
             </div>
           ))}
@@ -38,4 +38,4 @@ const Projects = () => {
   );
 };
 
-export default Projects;
+export default main_project;

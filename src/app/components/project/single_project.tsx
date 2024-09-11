@@ -4,14 +4,11 @@ import Content from "./content/project_content";
 import LoadingContent from "./content/project_loading_content";
 import "./button_anim.css";
 
-function ProjectCard({ project }) {
+function single_project({ project }) {
   const [viewMoreContent, setViewMoreContent] = React.useState("Read more");
   const [projectContent, setContent] = React.useState(
     <Content project={project} />
   );
-  let i = 0;
-  let txt = 'Lorem ipsum dummy text blabla.';
-  let speed = 50;
   const [loadingDots, setLoadingDots] = React.useState(1);
   React.useEffect(() => {
     const interval = setInterval(() => {
@@ -25,18 +22,9 @@ function ProjectCard({ project }) {
       setViewMoreContent("Loading" + ".".repeat(loadingDots));
     }
   }, [loadingDots]);
-  function typeWriter() {
-    if (i < txt.length) {
-      let type = document.getElementById("typewriter");
-      type.innerHTML += txt.charAt(i);
-      i++;
-      setTimeout(typeWriter, speed);
-    }
-  }
   function loading() {
     setViewMoreContent("Loading.");
     setContent(<LoadingContent project={project} />);
-    typeWriter();
   }
   return (
     <div
@@ -79,4 +67,4 @@ function ProjectCard({ project }) {
   );
 }
 
-export default ProjectCard;
+export default single_project;

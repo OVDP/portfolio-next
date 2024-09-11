@@ -1,4 +1,6 @@
 "use client";
+import Link from "next/link";
+
 export default function navbar() {
   localStorage.setItem("theme", "dark");
   const setDark = () => {
@@ -57,28 +59,28 @@ export default function navbar() {
         >
           <ul className="navbar-nav me-auto">
             <li>
-              <a className="text-decoration-none" href="#">
+              <Link href="/" className="text-decoration-none">
                 Home
-              </a>
+              </Link>
             </li>
           </ul>
         </div>
         <div className="d-none d-md-block">
           <ul className="navbar-nav me-auto">
             <li className="nav-item">
-              <a className="text-decoration-none" href="#">
+              <Link href="/" className="text-decoration-none">
                 About
-              </a>
+              </Link>
+            </li>
+            <li className="nav-item mx-2">
+              <Link href="/" className="text-decoration-none">
+                Project
+              </Link>
             </li>
             <li className="nav-item">
-              <a className="text-decoration-none mx-2" href="#">
-                Projects
-              </a>
-            </li>
-            <li className="nav-item">
-              <a className="text-decoration-none" href="#">
-                Experiences
-              </a>
+              <Link href="/" className="text-decoration-none">
+                Experience
+              </Link>
             </li>
           </ul>
         </div>
