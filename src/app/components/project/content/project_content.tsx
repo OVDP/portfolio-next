@@ -29,8 +29,8 @@ export default function project_content({ project }) {
         <span className="text-secondary">{`],`}</span>
       </div>
       <div className="ms-4 ms-lg-8">
-        <span className="text-white">myRole:</span>
-        <span className="text-warning">{project.role}</span>
+        <span className="text-white">date: </span>
+        <span className="text-warning">{project.date}</span>
         <span className="text-secondary">,</span>
       </div>
       <div className="ms-4 ms-lg-8">

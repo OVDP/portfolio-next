@@ -5,7 +5,7 @@ import LoadingContent from "./content/project_loading_content";
 import "./button_anim.css";
 
 function single_project({ project }) {
-  const [viewMoreContent, setViewMoreContent] = React.useState("Read more");
+  const [viewMoreContent, setViewMoreContent] = React.useState("View more");
   const [projectContent, setContent] = React.useState(
     <Content project={project} />
   );
