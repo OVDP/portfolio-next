@@ -13,7 +13,7 @@ export default function ProjectLoadingContent({ project }) {
     const delay2 = delay1 + ("start project" + project.id + ".exe").length * 90;
     setTimeout(() => set3(true), delay2);
     const delay3 = delay2 + 500;
-    setTimeout(() => router.push(`/projects`), delay3);
+    setTimeout(() => router.push(`/projects/${project.id}`), delay3);
   }, [project.id]);
 
   return (
