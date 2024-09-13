@@ -88,7 +88,7 @@ export default function experience() {
       <h1 style={{ fontSize: "18px", margin: "0px 10px 0px 10px" }}>
         Parttime Junior software developer at Holding the Drones
       </h1>
-      <sub style={{ margin: "0px 10px 0px 10px" }}>08/2023 - 02/2024</sub>
+      <sub style={{ margin: "0px 10px 0px 10px" }}>02/2024 - now</sub>
       <div className="d-lg-flex d-xxl-flex justify-content-lg-center align-items-lg-center align-items-xxl-start">
         <div>
           <p style={{ margin: "0px 10px 0px 10px" }}>

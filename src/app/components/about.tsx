@@ -27,8 +27,8 @@ export default function About() {
                                 </p>
                             </div>
                             <br />
-                            <div className="col d-md-flex justify-content-md-center align-items-md-center">
-                                <img alt="avatar, icon, tiktok" src="assets/img/g67c637f9c2be12cffe1b5fc8901243fd60ef5ace05086184c68976e7d0f777946f91e165fd555277d1c3231989e1f489aab3d31fc9ee80e84988f4586b00fcdc_640-1.jpg" style={{ borderRadius: '100%' }} />
+                            <div className="col d-flex justify-content-center align-items-center">
+                                <img alt="avatar, icon, tiktok" src="assets/img/sappigeman.jpg" style={{ borderRadius: '100%',width: "19rem"}} />
                             </div>
                         </div>
                     </div>

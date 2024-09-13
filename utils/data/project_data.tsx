@@ -78,7 +78,7 @@ export const projectsData = [
     tools: ["Html", "Css", "Javascript"],
     date: "09/09/2022 - 10/09/2022",
     repo: "",
-    demo: "/demo/snekk",
+    demo: "/demo/snake",
     image: imgproject5,
   },
   {

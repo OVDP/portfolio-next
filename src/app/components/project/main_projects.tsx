@@ -3,7 +3,7 @@ import SingleProject from "./single_project";
 
 const main_project = () => {
   return (
-    <div id="projects" className="position-relative z-50 my-4 my-lg-5">
+    <div id="projects" className="position-relative z-50 mx-2 mx-lg-0 my-4 my-lg-5">
       <div className="sticky-top" style={{ top: "10px" }}>
         <h1 style={{ textAlign: "center", margin: "4rem 0px 3rem 0px" }}>
           P
