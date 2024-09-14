@@ -1,159 +1,140 @@
-import React from 'react'
+"use client";
+import React, { useEffect, useRef, useState } from "react";
 
-export default function page() {
-  // voor bord grote en maten
-var blokgrote = 25;
-var posY = 20;
-var posX = 20;
-var bord;
-var context;
+const SnakeGame: React.FC = () => {
+  const canvasRef = useRef<HTMLCanvasElement | null>(null);
+  const [score, setScore] = useState(0);
+  const [gameOver, setGameOver] = useState(false);
 
-// voor snek zijn positie
-var snakeEenX = blokgrote * 5;
-var snakeEenY = blokgrote * 5;
+  const blokgrote = 25;
+  const posY = 20;
+  const posX = 20;
 
-var velocityEenx = 0;
-var velocityEeny = 0;
+  let snakeEenX = blokgrote * 5;
+  let snakeEenY = blokgrote * 5;
+  let velocityEenx = 0;
+  let velocityEeny = 0;
+  let snakebodyEen: number[][] = [];
+  let foodx = blokgrote * 10;
+  let foody = blokgrote * 10;
 
-var snakebodyEen = [];
+  useEffect(() => {
+    const canvas = canvasRef.current;
+    const context = canvas?.getContext("2d");
 
-var score = 0;
+    if (canvas && context) {
+      canvas.height = posY * blokgrote;
+      canvas.width = posX * blokgrote;
 
-// voor eten zijn positie
-var foodx = blokgrote * 10;
-var foody = blokgrote * 10;
+      placeFood();
+      document.addEventListener("keyup", changedirectionSnakeEen);
 
-var gameover = false;
-
-// zorgt ervoor dat er een speelveld in het midden van je scherm komt
-window.onload = function (){
-    bord = document.getElementById("bord");
-    bord.height = posY * blokgrote;
-    bord.width = posX * blokgrote;
-    context = bord.getContext("2d");
-
-    placefood();
-    document.addEventListener("keyup", changedirectionSnakeEen, changedirectionSnakeTwee);
-    document.addEventListener("keyup", changedirectionSnakeTwee);
-    setInterval(update, 1500/10);
-}
-// zorgt ervoor dat het speelveld update
-function update(){
-    if (gameover) {
-        return;
+      const interval = setInterval(update, 1500 / 10);
+      return () => {
+        clearInterval(interval);
+        document.removeEventListener("keyup", changedirectionSnakeEen);
+      };
     }
+  }, []);
 
-    context.fillStyle = "black";
-    context.fillRect( 0, 0, bord.width, bord.height);
+  const update = () => {
+    if (gameOver) return;
 
-    context.fillStyle = "red";
-    context.fillRect(foodx, foody, blokgrote, blokgrote);
+    const canvas = canvasRef.current;
+    const context = canvas?.getContext("2d");
 
-    if (snakeEenX == foodx && snakeEenY == foody){
+    if (context) {
+      context.fillStyle = "black";
+      context.fillRect(0, 0, canvas.width, canvas.height);
+
+      context.fillStyle = "red";
+      context.fillRect(foodx, foody, blokgrote, blokgrote);
+
+      if (snakeEenX === foodx && snakeEenY === foody) {
         snakebodyEen.push([foodx, foody]);
-        scoreboard(1);
-        placefood();
-    }
+        setScore((prevScore) => prevScore + 1);
+        placeFood();
+      }
 
+      for (let i = snakebodyEen.length - 1; i > 0; i--) {
+        snakebodyEen[i] = snakebodyEen[i - 1];
+      }
 
-    for (let i = snakebodyEen.length-1; i > 0; i--){
-        snakebodyEen[i] = snakebodyEen[i-1];
-    }
-
-    if (snakebodyEen.length){
+      if (snakebodyEen.length) {
         snakebodyEen[0] = [snakeEenX, snakeEenY];
+      }
+
+      context.fillStyle = "green";
+      snakeEenX += velocityEenx * blokgrote;
+      snakeEenY += velocityEeny * blokgrote;
+      context.fillRect(snakeEenX, snakeEenY, blokgrote, blokgrote);
+      for (let i = 0; i < snakebodyEen.length; i++) {
+        context.fillRect(
+          snakebodyEen[i][0],
+          snakebodyEen[i][1],
+          blokgrote,
+          blokgrote
+        );
+      }
+
+      if (
+        snakeEenX < 0 ||
+        snakeEenX > posX * blokgrote ||
+        snakeEenY < 0 ||
+        snakeEenY > posY * blokgrote
+      ) {
+        setGameOver(true);
+        alert("Snekkie 1 L bozo");
+        playAgain();
+      }
     }
+  };
 
-    context.fillStyle = "green";
-    snakeEenX += velocityEenx * blokgrote;
-    snakeEenY += velocityEeny * blokgrote;
-    context.fillRect(snakeEenX, snakeEenY, blokgrote, blokgrote)
-    for (let i = 0; i < snakebodyEen.length; i++ ){
-        context.fillRect(snakebodyEen[i][0], snakebodyEen[i][1], blokgrote, blokgrote);
+  const changedirectionSnakeEen = (e: KeyboardEvent) => {
+    if (e.code === "KeyW" && velocityEeny !== 1) {
+      velocityEenx = 0;
+      velocityEeny = -1;
+    } else if (e.code === "KeyS" && velocityEeny !== -1) {
+      velocityEenx = 0;
+      velocityEeny = 1;
+    } else if (e.code === "KeyA" && velocityEenx !== 1) {
+      velocityEenx = -1;
+      velocityEeny = 0;
+    } else if (e.code === "KeyD" && velocityEenx !== -1) {
+      velocityEenx = 1;
+      velocityEeny = 0;
     }
+  };
 
-    if (snakeEenX < 0 || snakeEenX > posX*blokgrote || snakeEenY < 0 || snakeEenY > posY*blokgrote){
-        gameover = true
-        alert("Snekkie 1 L bozo")
-        document.getElementById("restartknop").style.display = "inline";
-    }
+  const placeFood = () => {
+    foodx = Math.floor(Math.random() * posX) * blokgrote;
+    foody = Math.floor(Math.random() * posY) * blokgrote;
+  };
 
-    for (let i = 0; i < snakebodyEen.length; i++){
-        if(snakeEenX == snakebodyEen[i][0] && snakeEenY == snakebodyEen[i][1]){
-            gameover = true;
-            alert("Snekkie 1 L bozo")
-            document.getElementById("restartknop").style.display = "inline";
-        }
-    }
-}
-
-function changedirectionSnakeEen(e){
-    if (e.code == "KeyW" && velocityEeny != 1){
-        velocityEenx = 0;
-        velocityEeny = -1;
-    }   
-    else if (e.code == "KeyS" && velocityEeny != -1){
-        velocityEenx = 0;
-        velocityEeny = 1;
-    } 
-    else if (e.code == "KeyA" && velocityEenx != 1){
-        velocityEenx = -1;
-        velocityEeny = 0;
-    } 
-    else if (e.code == "KeyD" && velocityEenx != -1){
-        velocityEenx = 1;
-        velocityEeny = 0;
-    } 
-}
-
-function changedirectionSnakeTwee(e){
-}
-
-// randomizer waar het eten komt
-function placefood(){
-    foodx = Math.floor(Math.random()* posX)* blokgrote;
-    foody = Math.floor(Math.random()* posY)* blokgrote;
-}
-// een nieuwe snake plaatsen
-function playagain(){
-    gameover = false;
-    {
-    context.fillStyle = "green";
+  const playAgain = () => {
+    setGameOver(false);
     snakeEenX = 5 * blokgrote;
     snakeEenY = 5 * blokgrote;
-    }
     velocityEenx = 0;
     velocityEeny = 0;
     snakebodyEen = [];
-    context.fillRect(snakeEenX, snakeEenY, blokgrote, blokgrote);
-    document.getElementById("restartknop").style.display = "none";
-    score = 0;
-    document.getElementById("score").innerHTML = score;
-}
-function scoreboard(punt)
-{
-    score = score + punt;
-    document.getElementById("score").innerHTML = score;
-    if (score == 30)
-    {
-        alert("Goed gedaan ig")
-        window.location.href = "/School/praktijk/T2/nieuw%20portfolio%20L/index2.html";
-    }
-}
+    setScore(0);
+  };
 
   return (
     <>
-      <br/>
-            <h1>
-                Snekk.io
-            </h1>
-            <h2>
-                Score: <span id="score"></span>/30
-            </h2>
-        <canvas id="bord"></canvas>
-          <button onClick={playagain} id="restartknop">
-              Play again
-          </button>
+      <br />
+      <h1 style={{ textAlign: "center", margin: "4rem 0px 3rem 0px" }}>
+        S<span style={{ borderBottom: "6px solid #ef5868" }}>nekk&nbsp;</span>
+      </h1>
+      <h2 style={{ textAlign: "center", margin: "4rem 0px 3rem 0px" }}>
+        Score: <span>{score}</span>/30
+      </h2>
+      <div className="text-center">
+        <canvas ref={canvasRef} id="bord"></canvas>
+      </div>
     </>
-  )
-}
+  );
+};
+
+export default SnakeGame;

@@ -2,7 +2,9 @@
 import Link from "next/link";
 
 export default function navbar() {
-  localStorage.setItem("theme", "dark");
+  if (typeof window !== "undefined") {
+    localStorage.setItem("theme", "dark");
+  }
   const setDark = () => {
     const mainBackground = document.getElementById("main-background");
     const lightButton = document.getElementById("light-button");
@@ -12,7 +14,9 @@ export default function navbar() {
       lightButton.style.display = "none";
       darkButton.style.display = "block";
     }
-    localStorage.setItem("theme", "dark");
+    if (typeof window !== "undefined") {
+      localStorage.setItem("theme", "dark");
+    }
   };
   const setLight = () => {
     const mainBackground = document.getElementById("main-background");
@@ -23,7 +27,9 @@ export default function navbar() {
       darkButton.style.display = "none";
       lightButton.style.display = "block";
     }
-    localStorage.setItem("theme", "light");
+    if (typeof window !== "undefined") {
+      localStorage.setItem("theme", "light");
+    }
   };
   const toggleTheme = () => {
     const theme = localStorage.getItem("theme");

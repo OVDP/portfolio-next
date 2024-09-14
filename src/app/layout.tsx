@@ -19,7 +19,13 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en" data-bs-theme="dark">
+    <html
+      lang="en"
+      data-bs-theme="dark"
+      style={{
+        backgroundColor: "#1f1d1d",
+      }}
+    >
       <head>
         <Script src="assets/bootstrap/js/bootstrap.min.js" />
         <link
@@ -29,6 +35,10 @@ export default function RootLayout({
         <link
           rel="stylesheet"
           href="assets/css/Navbar-Centered-Brand-Dark-icons.css"
+        />
+        <link
+          href="https://fonts.googleapis.com/css2?family=Bevan:ital@0;1&display=swap"
+          rel="stylesheet"
         />
       </head>
       <body className={inter.className}>
@@ -45,6 +55,7 @@ export default function RootLayout({
             "--bs-light-rgb": "33,37,41",
             "background-attachment": "fixed",
             "background-size": "cover",
+            backgroundColor: "#1f1d1d",
           }}
         >
           <Navbar />

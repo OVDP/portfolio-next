@@ -40,81 +40,82 @@ export default function experience() {
               </li>
             </ul>
           </div>
-          <div className="d-flex d-md-flex justify-content-center justify-content-md-center"></div>
-          <img
-            className="float-lg-end"
-            src="assets/img/kw1c.png"
-            style={{
-              width: "250px",
-              position: "relative",
-              marginRight: "0",
-              marginLeft: "0",
-            }}
-          />
+          <div className="d-flex d-md-flex d-lg-flex justify-content-center justify-content-md-center justify-content-lg-center">
+            <img
+              className="float-lg-end"
+              src="assets/img/kw1c.png"
+              style={{
+                width: "250px",
+                position: "relative",
+                marginRight: "0",
+                marginLeft: "0",
+              }}
+            />
+          </div>
         </div>
-      </div>
-      <h1 style={{ fontSize: "18px", margin: "0px 10px 0px 10px" }}>
-        Internship at Holding the Drones
-      </h1>
-      <sub style={{ margin: "0px 10px 0px 10px" }}>08/2023 - 02/2024</sub>
-      <div className="d-lg-flex d-xxl-flex justify-content-lg-center align-items-lg-center align-items-xxl-start">
-        <div>
-          <p style={{ margin: "0px 10px 0px 10px" }}>
-            During my internship at Holding the Drones, I focused on coding
-            multiple full-stack websites and applications, supporting their
-            software environment for drones.
-          </p>
-          <ul>
-            <li>
-              Further programmed with: PHP, HTML, CSS, JavaScript, MySQL,
-              Node.js &amp; ReactJS.
-            </li>
-            <li>Design with: Figma.</li>
-            <li>Planned with: Trello &amp; Excel.</li>
-            <li>
-              Hosted websites and databases using Linux, Docker, Apache,
-              FileZilla, Nginx &amp; Putty.
-            </li>
-          </ul>
+        <h1 style={{ fontSize: "18px", margin: "0px 10px 0px 10px" }}>
+          Internship at Holding the Drones
+        </h1>
+        <sub style={{ margin: "0px 10px 0px 10px" }}>08/2023 - 02/2024</sub>
+        <div className="d-lg-flex d-xxl-flex justify-content-lg-center align-items-lg-center align-items-xxl-start">
+          <div>
+            <p style={{ margin: "0px 10px 0px 10px" }}>
+              During my internship at Holding the Drones, I focused on coding
+              multiple full-stack websites and applications, supporting their
+              software environment for drones.
+            </p>
+            <ul>
+              <li>
+                Further programmed with: PHP, HTML, CSS, JavaScript, MySQL,
+                Node.js &amp; ReactJS.
+              </li>
+              <li>Design with: Figma.</li>
+              <li>Planned with: Trello &amp; Excel.</li>
+              <li>
+                Hosted websites and databases using Linux, Docker, Apache,
+                FileZilla, Nginx &amp; Putty.
+              </li>
+            </ul>
+          </div>
+          <div className="d-flex d-md-flex d-lg-flex justify-content-center justify-content-md-center justify-content-lg-center">
+            <img
+              className="float-lg-end"
+              src="assets/img/Logohtd.jpg"
+              style={{ width: "250px", position: "relative" }}
+            />
+          </div>
         </div>
-        <div className="d-flex d-md-flex d-lg-flex justify-content-center justify-content-md-center justify-content-lg-center">
-          <img
-            className="float-lg-end"
-            src="assets/img/Logohtd.jpg"
-            style={{ width: "250px", position: "relative" }}
-          />
-        </div>
-      </div>
-      <h1 style={{ fontSize: "18px", margin: "0px 10px 0px 10px" }}>
-        Parttime Junior software developer at Holding the Drones
-      </h1>
-      <sub style={{ margin: "0px 10px 0px 10px" }}>02/2024 - now</sub>
-      <div className="d-lg-flex d-xxl-flex justify-content-lg-center align-items-lg-center align-items-xxl-start">
-        <div>
-          <p style={{ margin: "0px 10px 0px 10px" }}>
-            After completing my internship, I received an offer to continue
-            developing applications for Holding the Drones to support their
-            software environment.
-          </p>
-          <ul>
-            <li>
-              Further programmed with: PHP, HTML, CSS, JavaScript, MySQL,
-              Node.js, ReactJS, ExpressJS &amp; Tailwind CSS.
-            </li>
-            <li>Design with: Figma.</li>
-            <li>Planned with: Trello &amp; Excel.</li>
-            <li>
-              Hosted websites and databases using Linux, Docker, Apache,
-              FileZilla, Nginx &amp; Putty.
-            </li>
-          </ul>
-        </div>
-        <div className="d-flex d-md-flex justify-content-center justify-content-md-center">
-          <img
-            className="float-lg-end"
-            src="assets/img/Logohtd.jpg"
-            style={{ width: "250px", position: "relative" }}
-          />
+        <h1 style={{ fontSize: "18px", margin: "0px 10px 0px 10px" }}>
+          Parttime Junior software developer at Holding the Drones
+        </h1>
+        <sub style={{ margin: "0px 10px 0px 10px" }}>02/2024 - now</sub>
+        <div className="d-lg-flex d-xxl-flex justify-content-lg-center align-items-lg-center align-items-xxl-start">
+          <div>
+            <p style={{ margin: "0px 10px 0px 10px" }}>
+              After completing my internship, I received an offer to continue
+              developing applications for Holding the Drones to support their
+              software environment.
+            </p>
+            <ul>
+              <li>
+                Further programmed with: PHP, HTML, CSS, JavaScript, MySQL,
+                Node.js, ReactJS, ExpressJS &amp; Tailwind CSS.
+              </li>
+              <li>Design with: Figma.</li>
+              <li>Planned with: Trello &amp; Excel.</li>
+              <li>
+                Hosted websites and databases using Linux, Docker, Apache,
+                FileZilla, Nginx &amp; Putty.
+              </li>
+            </ul>
+          </div>
+          <div className="d-flex d-md-flex justify-content-center justify-content-md-center">
+            <img
+              className="float-lg-end"
+              src="assets/img/Logohtd.jpg"
+              style={{ width: "250px", position: "relative" }}
+            />
+          </div>
         </div>
       </div>
     </div>
