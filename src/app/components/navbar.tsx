@@ -1,5 +1,6 @@
 "use client";
 import Link from "next/link";
+import parallax from "./parallax";
 
 export default function navbar() {
   if (typeof window !== "undefined") {
@@ -9,8 +10,11 @@ export default function navbar() {
     const mainBackground = document.getElementById("main-background");
     const lightButton = document.getElementById("light-button");
     const darkButton = document.getElementById("dark-button");
+    const parallaxForeground = document.getElementById("parallax-foreground");
     if (mainBackground && lightButton && darkButton) {
       mainBackground.style.color = "#DEE2E6";
+      mainBackground.style.backgroundColor = "#2B1B1B";
+      parallaxForeground.src = "assets/img/parallax/foreground_dark.png";
       lightButton.style.display = "none";
       darkButton.style.display = "block";
     }
@@ -21,9 +25,12 @@ export default function navbar() {
   const setLight = () => {
     const mainBackground = document.getElementById("main-background");
     const lightButton = document.getElementById("light-button");
+    const parallaxForeground = document.getElementById("parallax-foreground");
     const darkButton = document.getElementById("dark-button");
     if (mainBackground && darkButton && lightButton) {
       mainBackground.style.color = "#212529";
+      mainBackground.style.backgroundColor = "#f5f5f5";
+      parallaxForeground.src = "assets/img/parallax/foreground_light.png";
       darkButton.style.display = "none";
       lightButton.style.display = "block";
     }
@@ -97,12 +104,11 @@ export default function navbar() {
             href="#"
           >
             <svg
-              style={{ display: "none" }}
+              style={{ display: "none", color: "#DEE2E6" }}
               id="light-button"
               xmlns="http://www.w3.org/2000/svg"
               width="1em"
               height="1em"
-              fill="currentColor"
               viewBox="0 0 16 16"
               className="bi bi-sun-fill opacity-50 me-2"
             >

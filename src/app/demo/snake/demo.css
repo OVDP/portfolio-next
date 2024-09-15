@@ -1,0 +1,12 @@
+html {
+  background-color: #2b1b1b;
+}
+.navbar {
+  display: none;
+}
+footer {
+  display: none;
+}
+#scene {
+  display: none;
+}

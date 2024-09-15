@@ -25,7 +25,7 @@ export default function About() {
               />
             </div>
           </div>
-          <div className="col">
+          <div className="col z-1">
             <h1
               style={{
                 color: "#ef5868",
@@ -74,6 +74,7 @@ export default function About() {
               <br />
               <div className="col d-flex justify-content-center align-items-center">
                 <img
+                  className="z-1"
                   alt="code"
                   src="assets/img/code.jpg"
                   style={{ borderRadius: "20px", width: "40rem" }}

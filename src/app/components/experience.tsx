@@ -1,6 +1,9 @@
 export default function experience() {
   return (
-    <div className="container py-4 py-xl-5">
+    <div
+      className="container py-4 py-xl-5"
+      style={{ position: "relative", zIndex: 10 }}
+    >
       <div data-component="experience">
         <h1 style={{ textAlign: "center", margin: "4rem 0px 3rem 0px" }}>
           E

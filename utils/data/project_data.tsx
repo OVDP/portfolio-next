@@ -78,7 +78,7 @@ export const projectsData = [
     tools: ["Html", "Css", "Javascript"],
     date: "09/09/2022 - 10/09/2022",
     repo: "",
-    demo: "/demo/snake",
+    demo: "/demo/snake#bord",
     image: imgproject5,
   },
   {
@@ -115,7 +115,7 @@ export const projectsData = [
     ],
     date: "22/10/2023 - 10/06/2024",
     repo: "https://github.com/OVDP/HypSkyApi-react",
-    demo: "/demo/hypskyapi",
+    demo: "",
     image: imgproject7,
   },
   {

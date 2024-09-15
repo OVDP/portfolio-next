@@ -1,5 +1,6 @@
 "use client";
 import React, { useEffect, useRef, useState } from "react";
+import "./demo.css";
 
 const SnakeGame: React.FC = () => {
   const canvasRef = useRef<HTMLCanvasElement | null>(null);
