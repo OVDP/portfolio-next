@@ -1,7 +1,7 @@
 export default function About() {
   return (
     <>
-      <div data-component="about" className="container">
+      <div data-component="about" className="container" id="about">
         <div className="row align-items-center my-0 my-md-5">
           <div
             className="col"
@@ -19,8 +19,6 @@ export default function About() {
                 style={{
                   borderRadius: "100%",
                   width: "19rem",
-                  borderRight: "6px solid #1f1d1d",
-                  borderBottom: "6px solid #1f1d1d",
                 }}
               />
             </div>
@@ -28,7 +26,6 @@ export default function About() {
           <div className="col z-1">
             <h1
               style={{
-                color: "#f2f2f2",
                 textAlign: "center",
               }}
               className="font-weight-bold display-6 bevan-regular-italic"
@@ -37,11 +34,20 @@ export default function About() {
               OvdP
             </h1>
             <h2
-              style={{ color: "#f2f2f2", textAlign: "center",  }}
+              style={{ textAlign: "center" }}
               className="h4 bevan-regular"
               id="abouttitle"
             >
-              F<span style={{borderBottom: "6px solid #ef5868", width: "fit-content", margin: "auto"}}>ullstack developer&nbsp;</span>
+              F
+              <span
+                style={{
+                  borderBottom: "6px solid #ef5868",
+                  width: "fit-content",
+                  margin: "auto",
+                }}
+              >
+                ullstack developer&nbsp;
+              </span>
             </h2>
           </div>
         </div>

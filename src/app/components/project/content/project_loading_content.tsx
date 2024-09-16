@@ -17,26 +17,7 @@ export default function ProjectLoadingContent({ project }) {
   }, [project.id]);
 
   return (
-    // blink effect for the cursor
     <>
-      <style>
-        {`
-@keyframes blink {
-  0% {
-    opacity: 0;
-  }
-  50% {
-    opacity: 1;
-  }
-  100% {
-    opacity: 0;
-  }
-}
-.blink {
-  animation: blink 1s step-start infinite;
-}
-        `}
-      </style>
       <div className="my-1">
         <span className="text-white me-2">
           <span id="typewriter" className="text-info">

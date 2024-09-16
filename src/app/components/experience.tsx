@@ -4,7 +4,7 @@ export default function experience() {
       className="container py-4 py-xl-5"
       style={{ position: "relative", zIndex: 10 }}
     >
-      <div data-component="experience">
+      <div data-component="experience" id="experience">
         <h1 style={{ textAlign: "center", margin: "4rem 0px 3rem 0px" }}>
           E
           <span style={{ borderBottom: "6px solid #ef5868" }}>

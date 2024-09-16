@@ -12,7 +12,14 @@ export default function navbar() {
     const aboutName = document.getElementById("aboutname");
     const aboutTitle = document.getElementById("abouttitle");
     const parallaxForeground = document.getElementById("parallax-foreground");
-    if (mainBackground && lightButton && darkButton && parallaxForeground && aboutName && aboutTitle) {
+    if (
+      mainBackground &&
+      lightButton &&
+      darkButton &&
+      parallaxForeground &&
+      aboutName &&
+      aboutTitle
+    ) {
       mainBackground.style.color = "#DEE2E6";
       mainBackground.style.backgroundColor = "#2B1B1B";
       parallaxForeground.src = "assets/img/parallax/foreground_dark.png";
@@ -32,9 +39,16 @@ export default function navbar() {
     const aboutName = document.getElementById("aboutname");
     const aboutTitle = document.getElementById("abouttitle");
     const darkButton = document.getElementById("dark-button");
-    if (mainBackground && darkButton && lightButton && parallaxForeground && aboutName && aboutTitle) {
+    if (
+      mainBackground &&
+      darkButton &&
+      lightButton &&
+      parallaxForeground &&
+      aboutName &&
+      aboutTitle
+    ) {
       mainBackground.style.color = "#212529";
-      mainBackground.style.backgroundColor = "#f5f5f5";
+      mainBackground.style.backgroundColor = "#f2f2f2";
       parallaxForeground.src = "assets/img/parallax/foreground_light.png";
       darkButton.style.display = "none";
       lightButton.style.display = "block";
@@ -55,59 +69,54 @@ export default function navbar() {
     }
   };
   return (
-    <nav
-      data-component="navbar"
-      className="navbar navbar-expand-md py-3"
-      style={{
-        borderColor: "#cb1a2c",
-        borderBottom: "solid",
-        borderBottomColor: "#cb1a2c",
-      }}
-    >
+    <nav data-component="navbar" className="navbar navbar-expand-md py-4">
       <div className="container">
-        <button
-          data-bs-toggle="collapse"
-          className="navbar-toggler"
-          data-bs-target="#navcol-4"
-        >
-          <span className="visually-hidden">Toggle navigation</span>
-          <span className="navbar-toggler-icon"></span>
-        </button>
         <div
           className="collapse navbar-collapse flex-grow-0 order-md-first"
           id="navcol-4"
         >
-          <ul className="navbar-nav me-auto">
-            <li>
-              <Link href="/" className="text-decoration-none">
-                Home
-              </Link>
-            </li>
-          </ul>
+          <div className="d-flex flex-column flex-md-row justify-content-center ms-auto">
+            <ul className="navbar-nav me-auto col">
+              <li>
+                <Link href="/" className="text-decoration-none fw-bolder fs-5">
+                  &gt; $ cd /Home/ <span className="blink">▍</span>
+                </Link>
+              </li>
+            </ul>
+            <div className="d-md-block col">
+              <ul className="navbar-nav me-auto">
+                <li className="nav-item">
+                  <Link
+                    href="/#about"
+                    className="text-decoration-none fw-bolder fs-5"
+                  >
+                    /About
+                  </Link>
+                </li>
+                <li className="nav-item mx-0 mx-md-2">
+                  <Link
+                    href="/#projects"
+                    className="text-decoration-none fw-bolder fs-5"
+                  >
+                    /Project
+                  </Link>
+                </li>
+                <li className="nav-item">
+                  <Link
+                    href="/#experience"
+                    className="text-decoration-none fw-bolder fs-5"
+                  >
+                    /Experience
+                  </Link>
+                </li>
+              </ul>
+            </div>
+          </div>
         </div>
-        <div className="d-none d-md-block">
-          <ul className="navbar-nav me-auto">
-            <li className="nav-item">
-              <Link href="/" className="text-decoration-none">
-                About
-              </Link>
-            </li>
-            <li className="nav-item mx-2">
-              <Link href="/" className="text-decoration-none">
-                Project
-              </Link>
-            </li>
-            <li className="nav-item">
-              <Link href="/" className="text-decoration-none">
-                Experience
-              </Link>
-            </li>
-          </ul>
-        </div>
-        <div>
+        <div className="row justify-content-end ms-auto">
           <a
             onClick={toggleTheme}
-            className="dropdown-item d-flex align-items-center text-white"
+            className="dropdown-item d-flex align-items-center text-white col"
             href="#"
           >
             <svg
@@ -134,6 +143,14 @@ export default function navbar() {
               <path d="M10.794 3.148a.217.217 0 0 1 .412 0l.387 1.162c.173.518.579.924 1.097 1.097l1.162.387a.217.217 0 0 1 0 .412l-1.162.387a1.734 1.734 0 0 0-1.097 1.097l-.387 1.162a.217.217 0 0 1-.412 0l-.387-1.162A1.734 1.734 0 0 0 9.31 6.593l-1.162-.387a.217.217 0 0 1 0-.412l1.162-.387a1.734 1.734 0 0 0 1.097-1.097l.387-1.162zM13.863.099a.145.145 0 0 1 .274 0l.258.774c.115.346.386.617.732.732l.774.258a.145.145 0 0 1 0 .274l-.774.258a1.156 1.156 0 0 0-.732.732l-.258.774a.145.145 0 0 1-.274 0l-.258-.774a1.156 1.156 0 0 0-.732-.732l-.774-.258a.145.145 0 0 1 0-.274l.774-.258c.346-.115.617-.386.732-.732L13.863.1z"></path>
             </svg>
           </a>
+          <button
+            data-bs-toggle="collapse"
+            className="navbar-toggler col"
+            data-bs-target="#navcol-4"
+          >
+            <span className="visually-hidden">Toggle navigation</span>
+            <span className="navbar-toggler-icon"></span>
+          </button>
         </div>
       </div>
     </nav>
