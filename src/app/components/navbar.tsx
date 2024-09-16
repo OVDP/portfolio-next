@@ -1,6 +1,5 @@
 "use client";
 import Link from "next/link";
-import parallax from "./parallax";
 
 export default function navbar() {
   if (typeof window !== "undefined") {
@@ -10,13 +9,17 @@ export default function navbar() {
     const mainBackground = document.getElementById("main-background");
     const lightButton = document.getElementById("light-button");
     const darkButton = document.getElementById("dark-button");
+    const aboutName = document.getElementById("aboutname");
+    const aboutTitle = document.getElementById("abouttitle");
     const parallaxForeground = document.getElementById("parallax-foreground");
-    if (mainBackground && lightButton && darkButton) {
+    if (mainBackground && lightButton && darkButton && parallaxForeground && aboutName && aboutTitle) {
       mainBackground.style.color = "#DEE2E6";
       mainBackground.style.backgroundColor = "#2B1B1B";
       parallaxForeground.src = "assets/img/parallax/foreground_dark.png";
       lightButton.style.display = "none";
       darkButton.style.display = "block";
+      aboutName.style.color = "#f2f2f2";
+      aboutTitle.style.color = "#f2f2f2";
     }
     if (typeof window !== "undefined") {
       localStorage.setItem("theme", "dark");
@@ -26,13 +29,17 @@ export default function navbar() {
     const mainBackground = document.getElementById("main-background");
     const lightButton = document.getElementById("light-button");
     const parallaxForeground = document.getElementById("parallax-foreground");
+    const aboutName = document.getElementById("aboutname");
+    const aboutTitle = document.getElementById("abouttitle");
     const darkButton = document.getElementById("dark-button");
-    if (mainBackground && darkButton && lightButton) {
+    if (mainBackground && darkButton && lightButton && parallaxForeground && aboutName && aboutTitle) {
       mainBackground.style.color = "#212529";
       mainBackground.style.backgroundColor = "#f5f5f5";
       parallaxForeground.src = "assets/img/parallax/foreground_light.png";
       darkButton.style.display = "none";
       lightButton.style.display = "block";
+      aboutName.style.color = "#cb1a2c";
+      aboutTitle.style.color = "#cb1a2c";
     }
     if (typeof window !== "undefined") {
       localStorage.setItem("theme", "light");

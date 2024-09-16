@@ -194,12 +194,12 @@ a {
 }
 .bevan-regular {
   font-family: "Bevan", serif;
-  font-weight: 600;
+  font-weight: 300;
   font-style: normal;
 }
 .bevan-regular-italic {
   font-family: "Bevan", serif;
-  font-weight: 400;
+  font-weight: 300;
   font-size: 10rem;
   font-style: italic;
 }

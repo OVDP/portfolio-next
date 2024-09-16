@@ -28,18 +28,20 @@ export default function About() {
           <div className="col z-1">
             <h1
               style={{
-                color: "#ef5868",
+                color: "#f2f2f2",
                 textAlign: "center",
               }}
               className="font-weight-bold display-6 bevan-regular-italic"
+              id="aboutname"
             >
               OvdP
             </h1>
             <h2
-              style={{ color: "#ef5868", textAlign: "center" }}
+              style={{ color: "#f2f2f2", textAlign: "center",  }}
               className="h4 bevan-regular"
+              id="abouttitle"
             >
-              Fullstack developer
+              F<span style={{borderBottom: "6px solid #ef5868", width: "fit-content", margin: "auto"}}>ullstack developer&nbsp;</span>
             </h2>
           </div>
         </div>

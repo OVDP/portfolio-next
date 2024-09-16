@@ -3,6 +3,7 @@ export default function contact() {
     <>
       <section
         data-component="contact"
+        id="contact"
         className="position-relative py-4 py-xl-5"
       >
         <div className="container position-relative">
@@ -117,7 +118,7 @@ export default function contact() {
             </div>
             <div className="col-md-6 col-lg-5 col-xl-4">
               <div>
-                <form className="p-3 p-xl-4" method="post">
+                <form className="p-3 p-xl-4" method="post" action="#contact">
                   <div className="mb-3">
                     <input
                       className="form-control"

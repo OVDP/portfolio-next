@@ -6,8 +6,7 @@ export default function footer() {
           <div className="col">
             <p className="my-2">
               <span>
-                Copyright&nbsp;© 2023&nbsp;Othniel van de Pol. All rights
-                Reserved.
+                Made by Othniel van de Pol ©.
               </span>
             </p>
           </div>

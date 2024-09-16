@@ -104,7 +104,7 @@ export const projectsData = [
     id: 7,
     name: "HypSkyApi",
     description:
-      "For the game Hypixel Skyblock, I created a website that called the public Skyblock API to fetch all the auction data of items sold in the game's economy. I used this data to make a profit in game. The project started with a large Excel file that my friends and I made. The file grew so big that it took over 5 minutes to load all the new data when opened. To address this, I volunteered to create a separate tool with new features, outside of the Excel file. I later reworked this project to learn React and Bootstrap, which you can visit when clicking on the Repo link or see the demo on said demo link",
+      "For the game Hypixel Skyblock, I created a website that called the public Skyblock API to fetch all the auction data of items sold in the game's economy. I used this data to make a profit in game. The project started with a large Excel file that my friends and I made. The file grew so big that it took over 5 minutes to load all the new data when opened. To address this, I volunteered to create a separate tool with new features, outside of the Excel file. I later reworked this project to learn React and Bootstrap, which you can visit when clicking on the Repo link",
     tools: [
       "Html",
       "Javascript",
