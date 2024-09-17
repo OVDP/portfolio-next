@@ -2,7 +2,15 @@ import React, { useState, useEffect } from "react";
 import { Typewriter } from "react-simple-typewriter";
 import { useRouter } from "next/navigation";
 
-export default function ProjectLoadingContent({ project }) {
+interface Project {
+  id: string;
+}
+
+export default function ProjectLoadingContent({
+  project,
+}: {
+  project: Project;
+}) {
   const router = useRouter();
   // time between showing each line in the command prompt
   const [show2, set2] = useState(false);
@@ -12,7 +20,7 @@ export default function ProjectLoadingContent({ project }) {
     setTimeout(() => set2(true), delay1);
     const delay2 = delay1 + ("start project" + project.id + ".exe").length * 90;
     setTimeout(() => set3(true), delay2);
-    const delay3 = delay2 + 500;
+    const delay3 = delay2 + 400;
     setTimeout(() => router.push(`/projects/${project.id}`), delay3);
   }, [project.id]);
 

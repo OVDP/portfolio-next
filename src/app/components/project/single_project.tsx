@@ -4,7 +4,19 @@ import Content from "./content/project_content";
 import LoadingContent from "./content/project_loading_content";
 import "./button_anim.css";
 
-function single_project({ project }) {
+interface Project {
+  id: string;
+  name: string;
+  tools: string[];
+  date: string;
+  description: string;
+}
+
+interface SingleProjectProps {
+  project: Project;
+}
+
+function SingleProject({ project }: SingleProjectProps) {
   const [viewMoreContent, setViewMoreContent] = React.useState("View more");
   const [projectContent, setContent] = React.useState(
     <Content project={project} />
@@ -21,7 +33,7 @@ function single_project({ project }) {
     if (viewMoreContent.startsWith("Loading")) {
       setViewMoreContent("Loading" + ".".repeat(loadingDots));
     }
-  }, [loadingDots]);
+  }, [loadingDots, viewMoreContent]);
   function loading() {
     setViewMoreContent("Loading.");
     setContent(<LoadingContent project={project} />);
@@ -67,4 +79,4 @@ function single_project({ project }) {
   );
 }
 
-export default single_project;
+export default SingleProject;

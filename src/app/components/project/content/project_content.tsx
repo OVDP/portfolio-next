@@ -1,6 +1,13 @@
 import React from "react";
 
-export default function project_content({ project }) {
+interface Project {
+  name: string;
+  tools: string[];
+  date: string;
+  description: string;
+}
+
+export default function project_content({ project }: { project: Project }) {
   return (
     <>
       <div>

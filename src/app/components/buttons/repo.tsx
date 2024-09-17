@@ -1,6 +1,10 @@
 import React from "react";
 
-export default function repo({ link }) {
+interface RepoProps {
+  link: string;
+}
+
+export default function repo({ link }: RepoProps) {
   return (
     <a href={link} target="_blank" className="p-3 z-1">
       <div className="d-flex align-items-center row">

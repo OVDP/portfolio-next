@@ -1,19 +1,14 @@
+/* eslint-disable @next/next/no-img-element */
 import React, { useCallback } from "react";
-import { EmblaOptionsType, EmblaCarouselType } from "embla-carousel";
-import { DotButton, useDotButton } from "./carousel_buttons";
-import Autoplay from "embla-carousel-autoplay";
 import useEmblaCarousel from "embla-carousel-react";
+import Autoplay from "embla-carousel-autoplay";
+import { DotButton, useDotButton } from "./carousel_buttons";
 
-type PropType = {
-  slides: string[];
-  options?: EmblaOptionsType;
-};
-
-const EmblaCarousel: React.FC<PropType> = (props) => {
+const EmblaCarousel = (props) => {
   const { slides, options } = props;
   const [emblaRef, emblaApi] = useEmblaCarousel(options, [Autoplay()]);
 
-  const onNavButtonClick = useCallback((emblaApi: EmblaCarouselType) => {
+  const onNavButtonClick = useCallback((emblaApi) => {
     const autoplay = emblaApi?.plugins()?.autoplay;
     if (!autoplay) return;
 
@@ -29,6 +24,7 @@ const EmblaCarousel: React.FC<PropType> = (props) => {
     emblaApi,
     onNavButtonClick
   );
+
   return (
     <section className="embla">
       <div className="embla__viewport" ref={emblaRef}>

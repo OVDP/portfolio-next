@@ -2,8 +2,8 @@
 import React, { useEffect, useRef, useState } from "react";
 import "./demo.css";
 
-const SnakeGame: React.FC = () => {
-  const canvasRef = useRef<HTMLCanvasElement | null>(null);
+const SnakeGame = () => {
+  const canvasRef = useRef(null);
   const [score, setScore] = useState(0);
   const [gameOver, setGameOver] = useState(false);
 
@@ -15,7 +15,7 @@ const SnakeGame: React.FC = () => {
   let snakeEenY = blokgrote * 5;
   let velocityEenx = 0;
   let velocityEeny = 0;
-  let snakebodyEen: number[][] = [];
+  let snakebodyEen = [];
   let foodx = blokgrote * 10;
   let foody = blokgrote * 10;
 
@@ -91,7 +91,7 @@ const SnakeGame: React.FC = () => {
     }
   };
 
-  const changedirectionSnakeEen = (e: KeyboardEvent) => {
+  const changedirectionSnakeEen = (e) => {
     if (e.code === "KeyW" && velocityEeny !== 1) {
       velocityEenx = 0;
       velocityEeny = -1;

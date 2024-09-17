@@ -52,8 +52,8 @@ export default function navbar() {
       parallaxForeground.src = "assets/img/parallax/foreground_light.png";
       darkButton.style.display = "none";
       lightButton.style.display = "block";
-      aboutName.style.color = "#cb1a2c";
-      aboutTitle.style.color = "#cb1a2c";
+      aboutName.style.color = "#212529";
+      aboutTitle.style.color = "#212529";
     }
     if (typeof window !== "undefined") {
       localStorage.setItem("theme", "light");

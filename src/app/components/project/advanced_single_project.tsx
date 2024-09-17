@@ -1,7 +1,19 @@
-import React from 'react'
+import React from "react";
 import Content from "./content/project_content";
 
-export default function advanced_single_project({project}) {
+interface Project {
+  id: string;
+  name: string;
+  tools: string[];
+  date: string;
+  description: string;
+}
+
+export default function advanced_single_project({
+  project,
+}: {
+  project: Project;
+}) {
   return (
     <div
       id={`commandprompt${project.id}`}
@@ -32,8 +44,10 @@ export default function advanced_single_project({project}) {
         </p>
       </div>
       <div className="overflow-hidden border-top border-2 border-danger px-4 px-lg-8 py-4 py-lg-8">
-        <code className="font-monospace"><Content project={project}/></code>
+        <code className="font-monospace">
+          <Content project={project} />
+        </code>
       </div>
     </div>
-  )
+  );
 }

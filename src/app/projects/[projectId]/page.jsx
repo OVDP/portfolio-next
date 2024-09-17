@@ -6,25 +6,12 @@ import { projectsData } from "../../../../utils/data/project_data";
 import Repo from "../../components/buttons/repo";
 import Demo from "../../components/buttons/demo";
 
-interface Params {
-  projectId: string;
-}
-
-interface ProjectIdProps {
-  params: Params;
-}
-
-const ProjectId: React.FC<ProjectIdProps> = ({ params }) => {
+const ProjectId = ({ params }) => {
   const id = parseInt(params.projectId) - 1;
   const data = projectsData[id];
-  
-  // Ensure the project exists
-  if (!data) {
-    return <div>Project not found</div>;
-  }
 
-  const [showRepo, setRepo] = useState<React.ReactNode>(null);
-  const [showDemo, setDemo] = useState<React.ReactNode>(null);
+  const [showRepo, setRepo] = useState(null);
+  const [showDemo, setDemo] = useState(null);
   const [minHeight, setMinHeight] = useState("75vh");
 
   // Update Repo and Demo state
@@ -54,12 +41,17 @@ const ProjectId: React.FC<ProjectIdProps> = ({ params }) => {
 
     // Add window resize listener
     window.addEventListener("resize", updateMinHeight);
-    
+
     // Cleanup listener on component unmount
     return () => {
       window.removeEventListener("resize", updateMinHeight);
     };
   }, []);
+
+  // Ensure the project exists
+  if (!data) {
+    return <div>Project not found</div>;
+  }
 
   return (
     <div

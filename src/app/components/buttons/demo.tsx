@@ -1,7 +1,11 @@
 import React from "react";
 
-export default function Demo({ link }) {
-  const openMinimizedWindow = (e) => {
+interface DemoProps {
+  link: string;
+}
+
+export default function Demo({ link }: DemoProps) {
+  const openMinimizedWindow = (e: React.MouseEvent<HTMLAnchorElement>) => {
     e.preventDefault(); // Prevent the default anchor behavior
     window.open(
       link, // URL to open
