@@ -16,6 +16,7 @@ interface SingleProjectProps {
   project: Project;
 }
 
+// the loading animation
 function SingleProject({ project }: SingleProjectProps) {
   const [viewMoreContent, setViewMoreContent] = React.useState("View more");
   const [projectContent, setContent] = React.useState(
@@ -29,6 +30,7 @@ function SingleProject({ project }: SingleProjectProps) {
 
     return () => clearInterval(interval);
   }, []);
+  // add dots to loading.
   React.useEffect(() => {
     if (viewMoreContent.startsWith("Loading")) {
       setViewMoreContent("Loading" + ".".repeat(loadingDots));
@@ -49,17 +51,17 @@ function SingleProject({ project }: SingleProjectProps) {
         <div className="w-100 bg-gradient"></div>
       </div>
       <div className="px-4 px-lg-8 py-3 py-lg-4 position-relative">
-        <div className="d-flex flex-row gap-1 gap-lg-2 position-absolute top-50 translate-middle-y">
+        <div className="d-sm-flex flex-col flex-sm-row gap-1 gap-lg-2 position-absolute top-50 translate-middle-y">
           <div
-            className="rounded-circle bg-danger"
+            className="rounded-circle bg-danger my-1 my-sm-0"
             style={{ width: "0.75rem", height: "0.75rem" }}
           ></div>
           <div
-            className="rounded-circle bg-warning"
+            className="rounded-circle bg-warning my-1 my-sm-0"
             style={{ width: "0.75rem", height: "0.75rem" }}
           ></div>
           <div
-            className="rounded-circle bg-success"
+            className="rounded-circle bg-success my-1 my-sm-0"
             style={{ width: "0.75rem", height: "0.75rem" }}
           ></div>
         </div>

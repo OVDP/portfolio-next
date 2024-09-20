@@ -5,6 +5,7 @@ export default function navbar() {
   if (typeof window !== "undefined") {
     localStorage.setItem("theme", "dark");
   }
+  // dark mode switch
   const setDark = () => {
     const mainBackground = document.getElementById("main-background");
     const lightButton = document.getElementById("light-button");
@@ -32,6 +33,7 @@ export default function navbar() {
       localStorage.setItem("theme", "dark");
     }
   };
+  // light mode switch
   const setLight = () => {
     const mainBackground = document.getElementById("main-background");
     const lightButton = document.getElementById("light-button");
@@ -59,6 +61,7 @@ export default function navbar() {
       localStorage.setItem("theme", "light");
     }
   };
+  // toggle theme
   const toggleTheme = () => {
     const theme = localStorage.getItem("theme");
 

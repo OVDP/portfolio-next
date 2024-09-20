@@ -29,7 +29,7 @@
     "src/app/projects/[projectId]/page.tsx",
     "src/app/components/navbar.jsx",
     "src/app/components/carousel/carousel.jsx",
-    "src/app/components/project/main_projects.jsx",
+    "src/app/components/project/main_projects.tsx",
     "src/app/demo/snake/page.jsx"
   ],
   "exclude": ["node_modules"]

@@ -6,6 +6,7 @@ interface Project {
   id: string;
 }
 
+// the console animation for loading
 export default function ProjectLoadingContent({
   project,
 }: {

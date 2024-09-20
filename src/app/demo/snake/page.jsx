@@ -2,6 +2,7 @@
 import React, { useEffect, useRef, useState } from "react";
 import "./demo.css";
 
+// snake game
 const SnakeGame = () => {
   const canvasRef = useRef(null);
   const [score, setScore] = useState(0);
@@ -38,6 +39,7 @@ const SnakeGame = () => {
     }
   }, []);
 
+  // update de game
   const update = () => {
     if (gameOver) return;
 
@@ -91,6 +93,7 @@ const SnakeGame = () => {
     }
   };
 
+  // verander de richting van de snake
   const changedirectionSnakeEen = (e) => {
     if (e.code === "KeyW" && velocityEeny !== 1) {
       velocityEenx = 0;
@@ -107,11 +110,13 @@ const SnakeGame = () => {
     }
   };
 
+  // gen het eten
   const placeFood = () => {
     foodx = Math.floor(Math.random() * posX) * blokgrote;
     foody = Math.floor(Math.random() * posY) * blokgrote;
   };
 
+  // speel opnieuw en reset de values
   const playAgain = () => {
     setGameOver(false);
     snakeEenX = 5 * blokgrote;

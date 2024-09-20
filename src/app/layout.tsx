@@ -10,7 +10,7 @@ import Parallax from "./components/parallax";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "OVDP",
+  title: "Othniel van de Pol",
   description: "The portfolio of Othniel van de Pol",
 };
 

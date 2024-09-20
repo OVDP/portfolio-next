@@ -5,9 +5,7 @@ export default function footer() {
         <div className="container">
           <div className="col">
             <p className="my-2">
-              <span>
-                Made by Othniel van de Pol ©.
-              </span>
+              <span>Made by Othniel van de Pol.</span>
             </p>
           </div>
         </div>

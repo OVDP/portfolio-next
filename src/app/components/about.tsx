@@ -1,8 +1,8 @@
 export default function About() {
   return (
     <>
-      <div data-component="about" className="container" id="about">
-        <div className="row align-items-center my-0 my-md-5">
+      <div data-component="about" className="container">
+        <div className="row justify-content-center align-items-center my-0 my-md-5">
           <div
             className="col"
             style={{
@@ -12,14 +12,16 @@ export default function About() {
               marginLeft: "6px",
             }}
           >
-            <div className="d-flex d-sm-flex d-xxl-flex justify-content-center justify-content-sm-center justify-content-xxl-center">
+            <div className="d-flex justify-content-center">
               <img
                 alt="Me"
-                src="assets/img/sappigeman.jpg"
+                src="assets/img/sappigeman.png"
                 style={{
                   borderRadius: "100%",
                   width: "19rem",
+                  margin: "auto",
                 }}
+                className="my-auto"
               />
             </div>
           </div>
@@ -54,7 +56,7 @@ export default function About() {
       </div>
       <div className="container">
         <div className="row">
-          <div className="col-md-12">
+          <div className="col-md-12" id="about">
             <h1 style={{ textAlign: "center", margin: "4rem 0px 3rem 0px" }}>
               A
               <span style={{ borderBottom: "6px solid #ef5868" }}>
