@@ -15,7 +15,7 @@ export default function About() {
             <div className="d-flex justify-content-center">
               <img
                 alt="Me"
-                src="assets/img/sappigeman.png"
+                src="assets/img/me.jpg"
                 style={{
                   borderRadius: "100%",
                   width: "19rem",
