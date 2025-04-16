@@ -117,7 +117,6 @@ export default function navbar() {
           <a
             onClick={toggleTheme}
             className="dropdown-item d-flex align-items-center text-white col"
-            href="#"
           >
             <svg
               style={{ display: "none", color: "#DEE2E6" }}

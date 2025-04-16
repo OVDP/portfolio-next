@@ -25,7 +25,7 @@ export default function experience() {
             <ul>
               <li>
                 Gained proficiency in programming languages and frameworks
-                including HTML, CSS, JavaScript, PHP, C#, .NET, MySQL, Tailwind
+                including HTML, CSS, JavaScript, PHP, C#, .NET, MAUI, MySQL, Tailwind
                 CSS, Node.js, Vue.js and Python.
               </li>
               <li>Learned to design with: Figma &amp; Visio</li>
@@ -117,6 +117,37 @@ export default function experience() {
               className="float-lg-end"
               src="assets/img/Logohtd.jpg"
               style={{ width: "250px", position: "relative" }}
+            />
+          </div>
+        </div>
+        <h1 style={{ fontSize: "18px", margin: "0px 10px 0px 10px" }}>
+          Internship at Kop Digitaal
+        </h1>
+        <sub style={{ margin: "0px 10px 0px 10px" }}>02/2025 - now</sub>
+        <div className="d-lg-flex d-xxl-flex justify-content-lg-center align-items-lg-center align-items-xxl-start">
+          <div>
+            <p style={{ margin: "0px 10px 0px 10px" }}>
+              During my studies at KW1C, 
+              I completed a graduation internship where I focused on developing back-end-heavy websites and applications, 
+              working on projects commissioned by Kop digitaal's clients.
+            </p>
+            <ul>
+              <li>
+                Further techniques used: Laravel, HTML, Tailwind CSS, JavaScript,
+                Node.js, ReactJS, PHP, Wordpress &amp; Woocommerce.
+              </li>
+              <li>Design with: Adobe xd.</li>
+              <li>Planned with: Jira</li>
+              <li>
+                Hosted websites and databases using Herd, Wordpress, Tabelplus &amp; DBngin.
+              </li>
+            </ul>
+          </div>
+          <div className="d-flex d-md-flex justify-content-center justify-content-md-center">
+            <img
+              className="float-lg-end"
+              src="assets/img/kop.png"
+              style={{ width: "250px", position: "relative", backgroundColor: "white", padding: "20px", borderRadius: "10px" }}
             />
           </div>
         </div>

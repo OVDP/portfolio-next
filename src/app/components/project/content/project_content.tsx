@@ -17,20 +17,25 @@ export default function project_content({ project }) {
       </div>
       <div className="ms-4 ms-lg-8">
         <span className="text-white">tools:</span>
-        <span className="text-secondary">{` ['`}</span>
+        
         {project.tools.map((tag, i) => (
           <React.Fragment key={i}>
+            <span className="text-secondary">{` ['`}</span>
             <span className="text-warning">{tag}</span>
-            {project.tools.length - 1 !== i && (
-              <span className="text-secondary">{`', '`}</span>
-            )}
+            <span className="text-secondary">{`'],`}</span>
+            
           </React.Fragment>
         ))}
-        <span className="text-secondary">{`],`}</span>
+        
       </div>
       <div className="ms-4 ms-lg-8">
-        <span className="text-white">date: </span>
-        <span className="text-warning">{project.date}</span>
+        <span className="text-white">startdate: </span>
+        <span className="text-warning">{project.startdate}</span>
+        <span className="text-secondary">,</span>
+      </div>
+      <div className="ms-4 ms-lg-8">
+        <span className="text-white">endate: </span>
+        <span className="text-warning">{project.enddate}</span>
         <span className="text-secondary">,</span>
       </div>
       <div className="ms-4 ms-lg-8">
