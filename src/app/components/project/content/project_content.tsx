@@ -1,6 +1,7 @@
 import React from "react";
+import { Project } from "../project.types";
 
-export default function project_content({ project }) {
+export default function project_content({ project }: { project: Project }) {
   return (
     <>
       <div>

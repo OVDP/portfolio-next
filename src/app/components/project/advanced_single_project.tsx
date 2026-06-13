@@ -1,7 +1,8 @@
 import React from 'react'
 import Content from "./content/project_content";
+import { Project } from "./project.types";
 
-export default function advanced_single_project({project}) {
+export default function advanced_single_project({ project }: { project: Project }) {
   return (
     <div
       id={`commandprompt${project.id}`}

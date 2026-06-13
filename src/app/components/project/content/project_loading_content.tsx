@@ -2,7 +2,9 @@ import React, { useState, useEffect } from "react";
 import { Typewriter } from "react-simple-typewriter";
 import { useRouter } from "next/navigation";
 
-export default function ProjectLoadingContent({ project }) {
+import { Project } from "../project.types";
+
+export default function ProjectLoadingContent({ project }: { project: Project }) {
   const router = useRouter();
   // time between showing each line in the command prompt
   const [show2, set2] = useState(false);

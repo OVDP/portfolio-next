@@ -3,8 +3,9 @@ import * as React from "react";
 import Content from "./content/project_content";
 import LoadingContent from "./content/project_loading_content";
 import "./button_anim.css";
+import { Project } from "./project.types";
 
-function SingleProject({ project }) {
+function SingleProject({ project }: { project: Project }) {
   const [viewMoreContent, setViewMoreContent] = React.useState("View more");
   const [projectContent, setContent] = React.useState(
     <Content project={project} />

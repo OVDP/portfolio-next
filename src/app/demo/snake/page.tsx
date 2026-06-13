@@ -44,7 +44,7 @@ const SnakeGame: React.FC = () => {
     const canvas = canvasRef.current;
     const context = canvas?.getContext("2d");
 
-    if (context) {
+    if (context && canvas) {
       context.fillStyle = "black";
       context.fillRect(0, 0, canvas.width, canvas.height);
 
