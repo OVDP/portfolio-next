@@ -49,6 +49,7 @@ export default function experience() {
                 <img
                   className="float-lg-end"
                   src="/assets/img/hu.png"
+                  alt="Hogeschool Utrecht"
                   style={{ width: "250px", position: "relative", backgroundColor: "white", padding: "20px", borderRadius: "10px" }}
                 />
               </div>
@@ -94,6 +95,7 @@ export default function experience() {
                 <img
                   className="float-lg-end"
                   src="/assets/img/kw1c.png"
+                  alt="KW1C"
                   style={{ width: "250px", position: "relative", marginRight: "0", marginLeft: "0", borderRadius: "10px" }}
                 />
               </div>
@@ -130,6 +132,7 @@ export default function experience() {
                 <img
                   className="float-lg-end"
                   src="/assets/img/kop.png"
+                  alt="Kop Digitaal"
                   style={{ width: "250px", position: "relative", backgroundColor: "white", padding: "20px", borderRadius: "10px" }}
                 />
               </div>
@@ -167,6 +170,7 @@ export default function experience() {
                 <img
                   className="float-lg-end"
                   src="/assets/img/Logohtd.jpg"
+                  alt="Holding the Drones"
                   style={{ width: "250px", position: "relative", borderRadius: "10px" }}
                 />
               </div>
@@ -204,6 +208,7 @@ export default function experience() {
                 <img
                   className="float-lg-end"
                   src="/assets/img/Logohtd.jpg"
+                  alt="Holding the Drones"
                   style={{ width: "250px", position: "relative", borderRadius: "10px" }}
                 />
               </div>

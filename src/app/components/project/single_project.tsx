@@ -4,7 +4,7 @@ import Content from "./content/project_content";
 import LoadingContent from "./content/project_loading_content";
 import "./button_anim.css";
 
-function single_project({ project }) {
+function SingleProject({ project }) {
   const [viewMoreContent, setViewMoreContent] = React.useState("View more");
   const [projectContent, setContent] = React.useState(
     <Content project={project} />
@@ -66,4 +66,4 @@ function single_project({ project }) {
   );
 }
 
-export default single_project;
+export default SingleProject;

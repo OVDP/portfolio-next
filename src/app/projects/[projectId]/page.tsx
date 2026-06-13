@@ -17,23 +17,17 @@ interface ProjectIdProps {
 const ProjectId: React.FC<ProjectIdProps> = ({ params }) => {
   const id = parseInt(params.projectId) - 1;
   const data = projectsData[id];
-  
-  // Ensure the project exists
-  if (!data) {
-    return <div>Project not found</div>;
-  }
 
   const [showRepo, setRepo] = useState<React.ReactNode>(null);
   const [showDemo, setDemo] = useState<React.ReactNode>(null);
   const [minHeight, setMinHeight] = useState("75vh");
 
-  // Update Repo and Demo state
   useEffect(() => {
+    if (!data) return;
     setRepo(data.repo ? <Repo link={data.repo} /> : null);
     setDemo(data.demo ? <Demo link={data.demo} /> : null);
-  }, [data.repo, data.demo]);
+  }, [data]);
 
-  // Update minHeight on window resize
   useEffect(() => {
     const updateMinHeight = () => {
       if (window.innerWidth < 576) {
@@ -49,17 +43,14 @@ const ProjectId: React.FC<ProjectIdProps> = ({ params }) => {
       }
     };
 
-    // Set initial height
     updateMinHeight();
-
-    // Add window resize listener
     window.addEventListener("resize", updateMinHeight);
-    
-    // Cleanup listener on component unmount
-    return () => {
-      window.removeEventListener("resize", updateMinHeight);
-    };
+    return () => window.removeEventListener("resize", updateMinHeight);
   }, []);
+
+  if (!data) {
+    return <div>Project not found</div>;
+  }
 
   return (
     <div
