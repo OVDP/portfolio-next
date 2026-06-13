@@ -253,3 +253,33 @@ a {
 .blink {
   animation: blink 1s step-start infinite;
 }
+
+/* Profile picture click hint */
+@keyframes profilePulse {
+  0%   { box-shadow: 0 0 0 0 rgba(239, 88, 104, 0.5); }
+  70%  { box-shadow: 0 0 0 14px rgba(239, 88, 104, 0); }
+  100% { box-shadow: 0 0 0 0 rgba(239, 88, 104, 0); }
+}
+.profile-picture-hint {
+  border-radius: 50%;
+  animation: profilePulse 2.4s ease-out infinite;
+}
+.profile-picture-hint:hover {
+  animation: none;
+  box-shadow: 0 0 0 4px rgba(239, 88, 104, 0.6);
+  transition: box-shadow 0.2s ease;
+}
+
+/* Project card theming */
+.project-card {
+  background-color: #1f1d1d;
+}
+.project-text-primary {
+  color: #ffffff;
+}
+#main-background.light-mode .project-card {
+  background-color: #faf8f3;
+}
+#main-background.light-mode .project-text-primary {
+  color: #212529;
+}

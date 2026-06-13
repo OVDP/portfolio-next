@@ -5,18 +5,18 @@ export default function project_content({ project }) {
     <>
       <div>
         <span className="text-danger me-2">const</span>
-        <span className="text-white me-2">project</span>
+        <span className="project-text-primary me-2">project</span>
         <span className="text-danger me-2">=</span>
         <span className="text-secondary">{"{"}</span>
       </div>
       <div className="ms-4 ms-lg-8">
-        <span className="text-white me-2">name:</span>
+        <span className="project-text-primary me-2">name:</span>
         <span className="text-warning">{`'`}</span>
         <span className="text-warning">{project.name}</span>
         <span className="text-secondary">{`',`}</span>
       </div>
       <div className="ms-4 ms-lg-8">
-        <span className="text-white">tools:</span>
+        <span className="project-text-primary">tools:</span>
         
         {project.tools.map((tag, i) => (
           <React.Fragment key={i}>
@@ -29,17 +29,17 @@ export default function project_content({ project }) {
         
       </div>
       <div className="ms-4 ms-lg-8">
-        <span className="text-white">startdate: </span>
+        <span className="project-text-primary">startdate: </span>
         <span className="text-warning">{project.startdate}</span>
         <span className="text-secondary">,</span>
       </div>
       <div className="ms-4 ms-lg-8">
-        <span className="text-white">endate: </span>
+        <span className="project-text-primary">endate: </span>
         <span className="text-warning">{project.enddate}</span>
         <span className="text-secondary">,</span>
       </div>
       <div className="ms-4 ms-lg-8">
-        <span className="text-white">Description:</span>
+        <span className="project-text-primary">Description:</span>
         <span className="text-info">{" " + project.description}</span>
         <span className="text-secondary">,</span>
       </div>

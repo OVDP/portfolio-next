@@ -33,6 +33,17 @@ const main_project = () => {
             </div>
           ))}
         </div>
+        <p className="text-center mt-5" style={{ opacity: 0.6 }}>
+          More projects are on the way — curious? Check out my{" "}
+          <a
+            href="https://github.com/OVDP"
+            target="_blank"
+            style={{ color: "#ef5868", textDecoration: "underline" }}
+          >
+            GitHub
+          </a>
+          .
+        </p>
       </div>
     </div>
   );

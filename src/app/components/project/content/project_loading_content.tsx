@@ -19,7 +19,7 @@ export default function ProjectLoadingContent({ project }) {
   return (
     <>
       <div className="my-1">
-        <span className="text-white me-2">
+        <span className="project-text-primary me-2">
           <span id="typewriter" className="text-info">
             C:\Users\othniel&gt;
           </span>
@@ -28,7 +28,7 @@ export default function ProjectLoadingContent({ project }) {
       </div>
       {show2 && (
         <div className="my-1">
-          <span className="text-white me-2">
+          <span className="project-text-primary me-2">
             <span className="text-info">C:\Users\othniel&gt;</span>
             <Typewriter
               words={["start project" + project.id + ".exe"]}
@@ -44,7 +44,7 @@ export default function ProjectLoadingContent({ project }) {
           <span className="me-2 text-info">
             C:\Users\othniel&gt;
             <span>
-              <span className="blink text-white">▍</span>
+              <span className="blink project-text-primary">▍</span>
             </span>
           </span>
         </div>

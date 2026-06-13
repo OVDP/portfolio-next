@@ -5,8 +5,7 @@ export default function advanced_single_project({project}) {
   return (
     <div
       id={`commandprompt${project.id}`}
-      className="border border-danger position-relative rounded"
-      style={{ backgroundColor: "#1f1d1d" }}
+      className="project-card border border-danger position-relative rounded"
     >
       <div className="d-flex flex-row">
         <div className="w-100 bg-gradient"></div>
@@ -27,7 +26,7 @@ export default function advanced_single_project({project}) {
             style={{ width: "0.75rem", height: "0.75rem" }}
           ></div>
         </div>
-        <p className="text-center ms-3 mt-3 text-white fs-6 fs-lg-4">
+        <p className="text-center ms-3 mt-3 project-text-primary fs-6 fs-lg-4">
           {project.name}
         </p>
       </div>

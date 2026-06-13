@@ -2,62 +2,51 @@
 import Link from "next/link";
 
 export default function navbar() {
-  if (typeof window !== "undefined") {
-    localStorage.setItem("theme", "dark");
-  }
   const setDark = () => {
     const mainBackground = document.getElementById("main-background");
     const lightButton = document.getElementById("light-button");
     const darkButton = document.getElementById("dark-button");
+    const parallaxForeground = document.getElementById("parallax-foreground") as HTMLImageElement | null;
     const aboutName = document.getElementById("aboutname");
     const aboutTitle = document.getElementById("abouttitle");
-    const parallaxForeground = document.getElementById("parallax-foreground");
-    if (
-      mainBackground &&
-      lightButton &&
-      darkButton &&
-      parallaxForeground &&
-      aboutName &&
-      aboutTitle
-    ) {
+
+    if (mainBackground && lightButton && darkButton) {
       mainBackground.style.color = "#DEE2E6";
       mainBackground.style.backgroundColor = "#2B1B1B";
-      parallaxForeground.src = "assets/img/parallax/foreground_dark.png";
+      mainBackground.classList.remove("light-mode");
       lightButton.style.display = "none";
       darkButton.style.display = "block";
-      aboutName.style.color = "#f2f2f2";
-      aboutTitle.style.color = "#f2f2f2";
     }
-    if (typeof window !== "undefined") {
-      localStorage.setItem("theme", "dark");
+    if (parallaxForeground) {
+      parallaxForeground.src = "/assets/img/parallax/foreground_dark.png";
     }
+    if (aboutName) aboutName.style.color = "#f2f2f2";
+    if (aboutTitle) aboutTitle.style.color = "#f2f2f2";
+
+    localStorage.setItem("theme", "dark");
   };
   const setLight = () => {
     const mainBackground = document.getElementById("main-background");
     const lightButton = document.getElementById("light-button");
-    const parallaxForeground = document.getElementById("parallax-foreground");
+    const darkButton = document.getElementById("dark-button");
+    const parallaxForeground = document.getElementById("parallax-foreground") as HTMLImageElement | null;
     const aboutName = document.getElementById("aboutname");
     const aboutTitle = document.getElementById("abouttitle");
-    const darkButton = document.getElementById("dark-button");
-    if (
-      mainBackground &&
-      darkButton &&
-      lightButton &&
-      parallaxForeground &&
-      aboutName &&
-      aboutTitle
-    ) {
+
+    if (mainBackground && lightButton && darkButton) {
       mainBackground.style.color = "#212529";
       mainBackground.style.backgroundColor = "#f2f2f2";
-      parallaxForeground.src = "assets/img/parallax/foreground_light.png";
+      mainBackground.classList.add("light-mode");
       darkButton.style.display = "none";
       lightButton.style.display = "block";
-      aboutName.style.color = "#cb1a2c";
-      aboutTitle.style.color = "#cb1a2c";
     }
-    if (typeof window !== "undefined") {
-      localStorage.setItem("theme", "light");
+    if (parallaxForeground) {
+      parallaxForeground.src = "/assets/img/parallax/foreground_light.png";
     }
+    if (aboutName) aboutName.style.color = "#cb1a2c";
+    if (aboutTitle) aboutTitle.style.color = "#cb1a2c";
+
+    localStorage.setItem("theme", "light");
   };
   const toggleTheme = () => {
     const theme = localStorage.getItem("theme");
@@ -117,6 +106,7 @@ export default function navbar() {
           <a
             onClick={toggleTheme}
             className="dropdown-item d-flex align-items-center text-white col"
+            style={{ cursor: "pointer" }}
           >
             <svg
               style={{ display: "none", color: "#DEE2E6" }}

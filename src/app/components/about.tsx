@@ -1,4 +1,9 @@
+"use client";
+import { useState } from "react";
+
 export default function About() {
+  const [showSecond, setShowSecond] = useState(false);
+
   return (
     <>
       <div data-component="about" className="container" id="about">
@@ -13,14 +18,48 @@ export default function About() {
             }}
           >
             <div className="d-flex d-sm-flex d-xxl-flex justify-content-center justify-content-sm-center justify-content-xxl-center">
-              <img
-                alt="Me"
-                src="assets/img/sappigeman.jpg"
+              <div
+                onClick={() => setShowSecond((v) => !v)}
+                className="profile-picture-hint"
                 style={{
-                  borderRadius: "100%",
+                  cursor: "pointer",
+                  position: "relative",
                   width: "19rem",
+                  height: "19rem",
+                  flexShrink: 0,
                 }}
-              />
+              >
+                <img
+                  alt="Me"
+                  src="/assets/img/ktmduke.jpg"
+                  style={{
+                    width: "100%",
+                    height: "100%",
+                    objectFit: "cover",
+                    position: "absolute",
+                    top: 0,
+                    left: 0,
+                    clipPath: "circle(50% at 50% 50%)",
+                    opacity: 1,
+                  }}
+                />
+                <img
+                  alt="Me"
+                  src="/assets/img/sappigeman.jpg"
+                  style={{
+                    width: "100%",
+                    height: "100%",
+                    objectFit: "cover",
+                    position: "absolute",
+                    top: 0,
+                    left: 0,
+                    clipPath: "circle(50% at 50% 50%)",
+                    opacity: showSecond ? 1 : 0,
+                    transition: "opacity 0.5s ease",
+                    filter: "contrast(1.12) saturate(1.1) brightness(0.97)",
+                  }}
+                />
+              </div>
             </div>
           </div>
           <div className="col z-1">
@@ -38,7 +77,7 @@ export default function About() {
               className="h4 bevan-regular"
               id="abouttitle"
             >
-              F
+              E
               <span
                 style={{
                   borderBottom: "6px solid #ef5868",
@@ -46,7 +85,7 @@ export default function About() {
                   margin: "auto",
                 }}
               >
-                ullstack developer&nbsp;
+                mbedded software engineer&nbsp;
               </span>
             </h2>
           </div>
@@ -84,7 +123,7 @@ export default function About() {
                 <img
                   className="z-1"
                   alt="code"
-                  src="assets/img/code.jpg"
+                  src="/assets/img/code.jpg"
                   style={{ borderRadius: "20px", width: "40rem" }}
                 />
               </div>

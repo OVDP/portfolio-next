@@ -1,11 +1,14 @@
+"use client";
 import React, { useCallback } from "react";
 import { EmblaOptionsType, EmblaCarouselType } from "embla-carousel";
 import { DotButton, useDotButton } from "./carousel_buttons";
 import Autoplay from "embla-carousel-autoplay";
 import useEmblaCarousel from "embla-carousel-react";
 
+type SlideImage = { src: string };
+
 type PropType = {
-  slides: string[];
+  slides: SlideImage[];
   options?: EmblaOptionsType;
 };
 
