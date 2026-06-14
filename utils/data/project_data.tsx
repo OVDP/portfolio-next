@@ -24,6 +24,9 @@ const imgproject7 = [skyblock, hypskyapi, apidoc];
 import arduinoide from "../../public/assets/img/arduinoide.png";
 import esp32 from "../../public/assets/img/esp32.png";
 const imgproject8 = [arduinoide, esp32];
+import gymapp from "../../public/assets/img/gymapp.png";
+import gymappprogress from "../../public/assets/img/gymappprogress.png";
+const imgproject9 = [gymapp, gymappprogress];
 
 export const projectsData = [
   {
@@ -136,5 +139,17 @@ export const projectsData = [
     repo: "",
     demo: "",
     image: imgproject8,
+  },
+  {
+    id: 9,
+    name: "Gym Registration Desktop App",
+    description:
+      "To track my workouts and monitor my progress over time, I built a desktop application (inspired by Hevy) using Python and Tkinter. The app lets me log exercises, sets, reps, and weights for each gym session. All data is stored locally so I can look back at previous workouts and see how I have been improving",
+    tools: ["Python", "Tkinter"],
+    startdate: "10/11/2025",
+    enddate: "13/01/2026",
+    repo: "https://github.com/OVDP/gymregistration-desktop",
+    demo: "",
+    image: imgproject9,
   },
 ];

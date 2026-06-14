@@ -49,11 +49,12 @@ export default function navbar() {
     localStorage.setItem("theme", "light");
   };
   const toggleTheme = () => {
-    const theme = localStorage.getItem("theme");
+    const mainBackground = document.getElementById("main-background");
+    const isLight = mainBackground?.classList.contains("light-mode");
 
-    if (theme !== "dark") {
+    if (isLight) {
       setDark();
-    } else if (theme === "dark") {
+    } else {
       setLight();
     }
   };
